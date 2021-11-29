@@ -6,7 +6,7 @@ namespace practice
     {
         static void Main(string[] args){
             //The execution section does not always have to use ++
-            for (int i = 1; i < 6; i = i + 1)
+            for (int i = 1; i < 256; i = i + 1)
             {
                 Console.WriteLine(i);
             }

@@ -1,0 +1,13 @@
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.exe
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.deps.json
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.runtimeconfig.json
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.runtimeconfig.dev.json
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.dll
+C:\Users\randy\dotnetprojects\fundamentals1\bin\Debug\netcoreapp3.1\fundamentals1.pdb
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.csprojAssemblyReference.cache
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.AssemblyInfoInputs.cache
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.AssemblyInfo.cs
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.csproj.CoreCompileInputs.cache
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.dll
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.pdb
+C:\Users\randy\dotnetprojects\fundamentals1\obj\Debug\netcoreapp3.1\fundamentals1.genruntimeconfig.cache
