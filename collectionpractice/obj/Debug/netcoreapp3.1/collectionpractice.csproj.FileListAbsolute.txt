@@ -1,0 +1,13 @@
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.exe
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.deps.json
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.runtimeconfig.json
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.runtimeconfig.dev.json
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.dll
+C:\Users\randy\dotnetprojects\collectionpractice\bin\Debug\netcoreapp3.1\collectionpractice.pdb
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.csprojAssemblyReference.cache
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.AssemblyInfoInputs.cache
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.AssemblyInfo.cs
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.csproj.CoreCompileInputs.cache
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.dll
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.pdb
+C:\Users\randy\dotnetprojects\collectionpractice\obj\Debug\netcoreapp3.1\collectionpractice.genruntimeconfig.cache
