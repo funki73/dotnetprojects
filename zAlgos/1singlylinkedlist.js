@@ -49,7 +49,15 @@ class SinglyLinkedList {
      * @returns {boolean}
 
      */
-    isEmpty() { }
+    isEmpty() { 
+        if (this.head == null){
+            return true
+        }
+        else{
+            return false
+        }
+
+    }
 
     /**
      * Creates a new node with the given data and inserts it at the back of
@@ -59,7 +67,19 @@ class SinglyLinkedList {
      * @param {any} data The data to be added to the new node.
      * @returns {SinglyLinkedList} This list.
      */
-    insertAtBack(data) { }
+    insertAtBack(data) {
+        if (this.isEmpty()){
+            this.head = new Node(data)
+        }
+        else{
+            var runner = this.head
+            while (runner.next != null){
+                runner = runner.next
+            }
+            runner.next = new Node(data)
+        }
+
+    }
 
     /**
      * Calls insertAtBack on each item of the given array.
@@ -68,7 +88,11 @@ class SinglyLinkedList {
      * @param {Array<any>} vals The data for each new node.
      * @returns {SinglyLinkedList} This list.
      */
-    seedFromArr(vals) { }
+    seedFromArr(vals) { 
+        for( var i =0; i < vals.length; i++){
+            this.insertAtBack(vals[i])
+        }
+    }
 
     /**
      * Converts this list into an array containing the data of each node.
@@ -103,3 +127,17 @@ const list1 = new SinglyLinkedList();
 list1.seedFromArr([8, 6, 7, 5, 3, 0, 9]);
 const result1 = list1.toArr();
 console.log(expected1 == result1); // should print: true
+// console.log(result1)
+// console.log(expected1)
+// console.log(expected1)
+
+const list2 = new SinglyLinkedList();
+list2.insertAtBack(1);
+list2.insertAtBack(2);
+list2.insertAtBack(3);
+const test2 = new SinglyLinkedList();
+test2.head = new Node(1);
+test2.head.next = new Node(2);
+test2.head.next.next = new Node(3);
+console.log(list2);
+console.log(test2);
