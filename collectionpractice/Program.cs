@@ -33,7 +33,7 @@ namespace collectionpractice
             icecream.Add("Strawberry");
             icecream.Add("Cookie dough");
 
-            Console.WriteLine("There are {icecream.Count} flavors of ice cream.");
+            Console.WriteLine($"There are {icecream.Count} flavors of ice cream.");
             Console.WriteLine(icecream[2]);
 
             for (var idx = 0; idx < icecream.Count; idx++)
@@ -41,6 +41,22 @@ namespace collectionpractice
                 Console.WriteLine(icecream[idx]);
             }
             icecream.Remove("Mint");
+            Console.WriteLine($"There are {icecream.Count} flavors of ice cream.");
+
+            //User Info Dictionary//
+            //Create a dictionary that will store both string keys as well as string values
+            //Add key/value pairs to this dictionary
+            //Loop through the dictionary and print out each user's name and their associated ice cream flavor
+            Dictionary<string,string> matchingicecream = new Dictionary<string,string>();
+            matchingicecream.Add("Tim", "Chocolate");
+            matchingicecream.Add("Martin", "Vanilla");
+            matchingicecream.Add("Nikki", "Strawberry");
+            matchingicecream.Add("Sara", "Cookie dough");
+
+            foreach (KeyValuePair<string,string> entry in matchingicecream)
+            {
+                Console.WriteLine(entry.Key + " - " + entry.Value);
+            }
 
         }
     }
