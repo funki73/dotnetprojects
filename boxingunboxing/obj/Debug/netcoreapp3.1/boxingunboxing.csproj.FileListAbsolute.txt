@@ -1,0 +1,13 @@
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.exe
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.deps.json
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.runtimeconfig.json
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.runtimeconfig.dev.json
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.dll
+C:\Users\randy\dotnetprojects\boxingunboxing\bin\Debug\netcoreapp3.1\boxingunboxing.pdb
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.csprojAssemblyReference.cache
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.AssemblyInfoInputs.cache
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.AssemblyInfo.cs
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.csproj.CoreCompileInputs.cache
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.dll
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.pdb
+C:\Users\randy\dotnetprojects\boxingunboxing\obj\Debug\netcoreapp3.1\boxingunboxing.genruntimeconfig.cache

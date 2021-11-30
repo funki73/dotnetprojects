@@ -57,7 +57,6 @@ namespace collectionpractice
             {
                 Console.WriteLine(entry.Key + " - " + entry.Value);
             }
-
         }
     }
 }
