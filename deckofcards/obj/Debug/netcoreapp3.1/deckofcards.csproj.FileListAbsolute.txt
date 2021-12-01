@@ -1,0 +1,13 @@
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.exe
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.deps.json
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.runtimeconfig.json
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.runtimeconfig.dev.json
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.dll
+C:\Users\randy\dotnetprojects\deckofcards\bin\Debug\netcoreapp3.1\deckofcards.pdb
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.csprojAssemblyReference.cache
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.AssemblyInfoInputs.cache
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.AssemblyInfo.cs
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.csproj.CoreCompileInputs.cache
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.dll
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.pdb
+C:\Users\randy\dotnetprojects\deckofcards\obj\Debug\netcoreapp3.1\deckofcards.genruntimeconfig.cache
