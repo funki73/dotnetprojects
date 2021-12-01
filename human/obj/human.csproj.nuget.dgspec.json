@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\randy\\dotnetprojects\\1fundamentals1\\fundamentals1.csproj": {}
+    "C:\\Users\\randy\\dotnetprojects\\human\\human.csproj": {}
   },
   "projects": {
-    "C:\\Users\\randy\\dotnetprojects\\1fundamentals1\\fundamentals1.csproj": {
+    "C:\\Users\\randy\\dotnetprojects\\human\\human.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\dotnetprojects\\1fundamentals1\\fundamentals1.csproj",
-        "projectName": "fundamentals1",
-        "projectPath": "C:\\Users\\randy\\dotnetprojects\\1fundamentals1\\fundamentals1.csproj",
+        "projectUniqueName": "C:\\Users\\randy\\dotnetprojects\\human\\human.csproj",
+        "projectName": "human",
+        "projectPath": "C:\\Users\\randy\\dotnetprojects\\human\\human.csproj",
         "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\dotnetprojects\\1fundamentals1\\obj\\",
+        "outputPath": "C:\\Users\\randy\\dotnetprojects\\human\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
