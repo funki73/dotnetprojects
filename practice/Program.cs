@@ -5,8 +5,8 @@ namespace practice
 {
     class Program
     {
-        static void Main(string[] args){
-            
+        static void Main(string[] args)
+        {
             //Initializing an empty list of Motorcycle Manufacturers
             List<string> bikes = new List<string>();
             //Use the Add function in a similar fashion to push
