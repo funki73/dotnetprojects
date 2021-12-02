@@ -21,5 +21,24 @@ class Deck
                 }
             }
         }
+        public Card Deal()
+            {
+                Card card = Cards[0];
+                Cards.RemoveAt(0);
+                return card;
+            }
+        // public List<Card> Reset()
+        // {
+        //     Card.Clear();
+        //     for(int i = 0; i < 4; i++)
+        //     {
+        //         int j = 1;
+        //         while(j < 14)
+        //         {
+        //             Card.Add(new Card(Card.Suits[i], j));
+        //             j++;
+        //         }
+        //     }
+        //     return Card;
     }
 }
