@@ -4,9 +4,9 @@ namespace Portfolio
     public class HomeController : Controller
     {
         [HttpGet("")]
-        public string Index()
+        public ViewResult Index()
         {
-            return "This is my Index!";
+            return View();
         }
 
         [HttpGet("projects")]

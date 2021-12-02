@@ -4,9 +4,9 @@ namespace HelloASP
     public class HomeController : Controller
     {
         [HttpGet("")]
-        public string Index()
+        public ViewResult HiThere()
         {
-            return "Hello From Controller";
+            return View();
         }
 
         [HttpGet("hello")] //localhost:5000/hello
