@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\randy\\dotnetprojects\\boxingunboxing\\boxingunboxing.csproj": {}
+    "C:\\Users\\randy\\dotnetprojects\\5boxingunboxing\\boxingunboxing.csproj": {}
   },
   "projects": {
-    "C:\\Users\\randy\\dotnetprojects\\boxingunboxing\\boxingunboxing.csproj": {
+    "C:\\Users\\randy\\dotnetprojects\\5boxingunboxing\\boxingunboxing.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\randy\\dotnetprojects\\boxingunboxing\\boxingunboxing.csproj",
+        "projectUniqueName": "C:\\Users\\randy\\dotnetprojects\\5boxingunboxing\\boxingunboxing.csproj",
         "projectName": "boxingunboxing",
-        "projectPath": "C:\\Users\\randy\\dotnetprojects\\boxingunboxing\\boxingunboxing.csproj",
+        "projectPath": "C:\\Users\\randy\\dotnetprojects\\5boxingunboxing\\boxingunboxing.csproj",
         "packagesPath": "C:\\Users\\randy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\randy\\dotnetprojects\\boxingunboxing\\obj\\",
+        "outputPath": "C:\\Users\\randy\\dotnetprojects\\5boxingunboxing\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\randy\\AppData\\Roaming\\NuGet\\NuGet.Config"
