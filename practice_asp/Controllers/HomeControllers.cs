@@ -1,11 +1,15 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 namespace HelloASP
 {
     public class HomeController : Controller
     {
         [HttpGet("")]
-        public ViewResult HiThere()
+        public ViewResult Index()
         {
+            ViewBag.MyName = "Dude";
+            ViewBag.FavoriteVegetable = "Brussel Sprouts";
+
             return View();
         }
 
@@ -14,6 +18,7 @@ namespace HelloASP
         {
             return "Hi Again!";
         }
+
         [HttpGet("users/{username}/{location}")]
         public string HelloUser(string username, string location)
         {

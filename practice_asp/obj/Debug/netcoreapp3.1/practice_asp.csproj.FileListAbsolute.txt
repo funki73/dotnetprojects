@@ -29,3 +29,4 @@ C:\Users\randy\dotnetprojects\practice_asp\obj\Debug\netcoreapp3.1\practice_asp.
 C:\Users\randy\dotnetprojects\practice_asp\obj\Debug\netcoreapp3.1\practice_asp.Views.pdb
 C:\Users\randy\dotnetprojects\practice_asp\obj\Debug\netcoreapp3.1\practice_asp.csproj.CopyComplete
 C:\Users\randy\dotnetprojects\practice_asp\obj\Debug\netcoreapp3.1\Razor\Views\Home\HiThere.cshtml.g.cs
+C:\Users\randy\dotnetprojects\practice_asp\obj\Debug\netcoreapp3.1\Razor\Views\Home\index.cshtml.g.cs
