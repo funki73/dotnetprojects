@@ -21,13 +21,13 @@ namespace Portfolio
             return View();
         }
 
-        [HttpPost]
-        [Route("method")]
-        public IActionResult Method(string name, string emailinfo, string message)
-        {
-            Name = name;
-            Emailinfo = emailinfo;
-            Message = message;
-        }
+        // [HttpPost]
+        // [Route("method")]
+        // public IActionResult Method(string name, string emailinfo, string message)
+        // {
+        //     Name = name;
+        //     Emailinfo = emailinfo;
+        //     Message = message;
+        // }
     }
 }
