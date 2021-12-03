@@ -10,15 +10,24 @@ namespace Portfolio
         }
 
         [HttpGet("projects")]
-        public string projects()
+        public ViewResult projects()
         {
-            return "These are my projects!";
+            return View();
         }
 
         [HttpGet("contact")]
-        public string contact()
+        public ViewResult contact()
         {
-            return $"This is my Contact!";
+            return View();
+        }
+
+        [HttpPost]
+        [Route("method")]
+        public IActionResult Method(string name, string emailinfo, string message)
+        {
+            Name = name;
+            Emailinfo = emailinfo;
+            Message = message;
         }
     }
 }
