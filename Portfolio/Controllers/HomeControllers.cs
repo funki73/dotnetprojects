@@ -30,6 +30,5 @@ namespace Portfolio
             ViewBag.Message = message;
             return View();
         }
-
     }
 }

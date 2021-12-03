@@ -14402,6 +14402,11 @@
   "RootNamespace": "dojo_survey",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey\\Views\\Home\\surveysubmission.cshtml",
+      "TargetPath": "Views\\Home\\surveysubmission.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey\\Views\\Home\\index.cshtml",
       "TargetPath": "Views\\Home\\index.cshtml",
       "FileKind": "mvc"

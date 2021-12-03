@@ -29,3 +29,4 @@ C:\Users\randy\dotnetprojects\dojo_survey\obj\Debug\netcoreapp3.1\Razor\Views\Ho
 C:\Users\randy\dotnetprojects\dojo_survey\obj\Debug\netcoreapp3.1\dojo_survey.RazorTargetAssemblyInfo.cs
 C:\Users\randy\dotnetprojects\dojo_survey\obj\Debug\netcoreapp3.1\dojo_survey.Views.pdb
 C:\Users\randy\dotnetprojects\dojo_survey\obj\Debug\netcoreapp3.1\dojo_survey.csproj.CopyComplete
+C:\Users\randy\dotnetprojects\dojo_survey\obj\Debug\netcoreapp3.1\Razor\Views\Home\surveysubmission.cshtml.g.cs
