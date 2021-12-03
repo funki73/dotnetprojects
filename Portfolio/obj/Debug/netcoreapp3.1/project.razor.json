@@ -14412,6 +14412,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\Portfolio\\Views\\Home\\contactme.cshtml",
+      "TargetPath": "Views\\Home\\contactme.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\Portfolio\\Views\\Home\\contact.cshtml",
       "TargetPath": "Views\\Home\\contact.cshtml",
       "FileKind": "mvc"

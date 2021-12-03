@@ -31,3 +31,4 @@ C:\Users\randy\dotnetprojects\Portfolio\obj\Debug\netcoreapp3.1\Portfolio.Views.
 C:\Users\randy\dotnetprojects\Portfolio\obj\Debug\netcoreapp3.1\Portfolio.csproj.CopyComplete
 C:\Users\randy\dotnetprojects\Portfolio\obj\Debug\netcoreapp3.1\Razor\Views\Home\contact.cshtml.g.cs
 C:\Users\randy\dotnetprojects\Portfolio\obj\Debug\netcoreapp3.1\Razor\Views\Home\projects.cshtml.g.cs
+C:\Users\randy\dotnetprojects\Portfolio\obj\Debug\netcoreapp3.1\Razor\Views\Home\contactme.cshtml.g.cs

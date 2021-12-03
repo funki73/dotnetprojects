@@ -25,6 +25,9 @@ namespace Portfolio
         [HttpPost("/contact/submission")]
         public ViewResult ContactMe(string name, string email, string message)
         {
+            ViewBag.Name = name;
+            ViewBag.Email = email;
+            ViewBag.Message = message;
             return View();
         }
 
