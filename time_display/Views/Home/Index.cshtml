@@ -11,9 +11,11 @@
 <body>
     <h1>The current time and date:</h1>
     @{
-        DateTime CurrentTime = DateTime.Now;
-        //@* Console.WriteLine(DateTime.Now);
-        //Console.ReadLine(); *@
+        string day = DateTime.Now.ToString("MMMM dd, yyyy");
+        string time = DateTime.Now.ToString("hh:mm tt");
+
+        <h3>@day</h3>
+        <h3>@time</h3>
     }
 </body>
 </html>

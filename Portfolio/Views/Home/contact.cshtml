@@ -25,18 +25,18 @@
         </div>
         <div class = "main">
             <h1>Contact Me!</h1>
-            <form class="row g-3" action="method" method="post">
+            <form class="row g-3" action="/contact/submission" method="post">
                 <div class="col-md-6">
-                    <label for="name" class="form-label" name="Name">Name</label>
-                    <input type="text" class="form-control" id="name" required>
+                    <label for="name" class="form-label" >Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="emailinfo" class="form-label" name="Email">Email</label>
-                    <input type="text" class="form-control" id="emailinfo" required>
+                    <label for="emailinfo" class="form-label" >Email</label>
+                    <input type="text" class="form-control" id="emailinfo" name="email" required>
                 </div>
                 <div class="col-md-12">
-                    <label for="message" class="form-label" name="Message">Message</label>
-                    <textarea type="text" class="form-control" id="message" rows="3"></textarea>
+                    <label for="message" class="form-label"  >Message</label>
+                    <textarea type="text" class="form-control" id="message" name="message" rows="3"></textarea>
                 </div>
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary">Send</button>

@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
 namespace Portfolio
 {
@@ -21,13 +22,11 @@ namespace Portfolio
             return View();
         }
 
-        // [HttpPost]
-        // [Route("method")]
-        // public IActionResult Method(string name, string emailinfo, string message)
-        // {
-        //     Name = name;
-        //     Emailinfo = emailinfo;
-        //     Message = message;
-        // }
+        [HttpPost("/contact/submission")]
+        public ViewResult ContactMe(string name, string email, string message)
+        {
+            return View();
+        }
+
     }
 }
