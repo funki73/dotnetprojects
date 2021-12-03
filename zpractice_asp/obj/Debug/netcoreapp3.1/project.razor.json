@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\randy\\dotnetprojects\\practice_asp\\practice_asp.csproj",
+  "FilePath": "c:\\Users\\randy\\dotnetprojects\\zpractice_asp\\practice_asp.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,12 +14402,12 @@
   "RootNamespace": "practice_asp",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\practice_asp\\Views\\Home\\HiThere.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\zpractice_asp\\Views\\Home\\HiThere.cshtml",
       "TargetPath": "Views\\Home\\HiThere.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\practice_asp\\Views\\Home\\index.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\zpractice_asp\\Views\\Home\\index.cshtml",
       "TargetPath": "Views\\Home\\index.cshtml",
       "FileKind": "mvc"
     }
