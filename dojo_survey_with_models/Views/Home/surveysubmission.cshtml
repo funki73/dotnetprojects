@@ -1,3 +1,5 @@
+@model dojo_survey_with_models.Controllers.Survey;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,10 +13,10 @@
 <body>
     <div class = "container mt-5">
         <h1>Submitted Info</h1>
-        <p>Name: @ViewBag.Name</p>
-        <p>Favorite Language: @ViewBag.Favoritelanguage</p>
-        <p>Dojo Location: @ViewBag.Dojolocation</p>
-        <p>Comments: @ViewBag.Comments</p>
+        <p>Name: @Model.Name</p>
+        <p>Favorite Language: @Model.Favoritelanguage</p>
+        <p>Dojo Location: @Model.Dojolocation</p>
+        <p>Comments: @Model.Comments</p>
         <button type="submit" class="btn btn-primary" ><a href="/">Go Back</button>
     </div>
 </body>

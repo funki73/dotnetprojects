@@ -30,3 +30,4 @@ C:\Users\randy\dotnetprojects\dojo_survey_with_models\obj\Debug\netcoreapp3.1\Ra
 C:\Users\randy\dotnetprojects\dojo_survey_with_models\obj\Debug\netcoreapp3.1\dojo_survey_with_models.RazorTargetAssemblyInfo.cs
 C:\Users\randy\dotnetprojects\dojo_survey_with_models\obj\Debug\netcoreapp3.1\dojo_survey_with_models.Views.pdb
 C:\Users\randy\dotnetprojects\dojo_survey_with_models\obj\Debug\netcoreapp3.1\dojo_survey_with_models.csproj.CopyComplete
+C:\Users\randy\dotnetprojects\dojo_survey_with_models\obj\Debug\netcoreapp3.1\Razor\Views\Home\_ViewImports.cshtml.g.cs

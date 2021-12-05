@@ -1,3 +1,5 @@
+@model dojo_survey_with_models.Controllers.Survey;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +14,15 @@
     
     <div class = "container mt-5">
         <h1>Dojo Survey</h1>
-        <form class="row g-3" action="/survey/submission" method="post">
+        <form class="row g-3" asp-action="SurveySubmission">
             <div class="col-md-6">
-                <label for="name" class="form-label" name="Name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name"required>
+                <label asp-for="Name" class="form-label" name="Name"></label>
+                <input asp-for="Name">
+                
             </div>
             <div class="col-md-12">
                 <label for="floatingInput">Dojo Location:</label>
-                <select type="text" class="form-select" id="favoritelanguage" class="input-group-text" for="inputGroupSelect01" name="favoritelanguage">
+                <select asp-type="Dojolocation" class="form-select" class="input-group-text" for="inputGroupSelect01" name="favoritelanguage">
                     <option selected>Choose...</option>
                     <option value="Seattle">Seattle</option>
                     <option value="Bellevue">Bellevue</option>
@@ -27,7 +30,7 @@
             </div>
             <div class="col-md-12">
                 <label for="floatingInput">Favorite Language:</label>
-                <select type="text" class="form-select" id="dojolocation" class="input-group-text" for="inputGroupSelect01" name="dojolocation">
+                <select asp-type="Favoritelanguage" class="form-select" id="dojolocation" class="input-group-text" for="inputGroupSelect01" name="dojolocation">
                     <option selected>Choose...</option>
                     <option value="C#">C#</option>
                     <option value="Python">Python</option>
@@ -35,7 +38,7 @@
             </div>
             <div class="col-md-12">
                 <label for="comments" class="form-label" name="comments">Comments (optional)</label>
-                <textarea type="text" class="form-control" id="comments" name="comments" rows="3"></textarea>
+                <textarea type="text" class="form-control" asp-for="Comments" rows="3"></textarea>
             </div>
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Send</button>

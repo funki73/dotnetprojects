@@ -1,7 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-namespace dojo_survey_with_models
+namespace dojo_survey_with_models.Controllers
 {
     public class HomeController : Controller
     {
@@ -11,13 +11,11 @@ namespace dojo_survey_with_models
             return View();
         }
         [HttpPost("/survey/submission")]
-        public ViewResult SurveySubmission(string name, string favoritelanguage, string dojolocation, string comments)
+        public ViewResult SurveySubmission(Survey fromForm)
         {
-            ViewBag.Name = name;
-            ViewBag.Favoritelanguage = favoritelanguage;
-            ViewBag.Dojolocation = dojolocation;
-            ViewBag.Comments = comments;
-            return View();
+            // Survey toRender = new Survey(name, favoritelanguage, dojolocation, comments);
+
+            return View(fromForm);
         }
     }
 }
