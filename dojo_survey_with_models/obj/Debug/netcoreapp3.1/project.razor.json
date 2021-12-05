@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\view_model_fun.csproj",
+  "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey_with_models\\dojo_survey_with_models.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14399,26 +14399,21 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "view_model_fun",
+  "RootNamespace": "dojo_survey_with_models",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey_with_models\\Views\\Home\\index.cshtml",
+      "TargetPath": "Views\\Home\\index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Userlist.cshtml",
-      "TargetPath": "Views\\Home\\Userlist.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey_with_models\\Views\\Home\\surveysubmission.cshtml",
+      "TargetPath": "Views\\Home\\surveysubmission.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Numbers.cshtml",
-      "TargetPath": "Views\\Home\\Numbers.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Singleuser.cshtml",
-      "TargetPath": "Views\\Home\\Singleuser.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\dojo_survey_with_models\\Views\\Home\\_ViewImports.cshtml",
+      "TargetPath": "Views\\Home\\_ViewImports.cshtml",
       "FileKind": "mvc"
     }
   ],

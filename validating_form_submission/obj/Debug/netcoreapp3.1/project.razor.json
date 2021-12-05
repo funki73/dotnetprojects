@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\view_model_fun.csproj",
+  "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\validating_form_submission.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14399,26 +14399,46 @@
     ],
     "CSharpLanguageVersion": 800
   },
-  "RootNamespace": "view_model_fun",
+  "RootNamespace": "validating_form_submission",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Userlist.cshtml",
-      "TargetPath": "Views\\Home\\Userlist.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Numbers.cshtml",
-      "TargetPath": "Views\\Home\\Numbers.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\view_model_fun\\Views\\Home\\Singleuser.cshtml",
-      "TargetPath": "Views\\Home\\Singleuser.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\validating_form_submission\\Views\\Home\\Submitted.cshtml",
+      "TargetPath": "Views\\Home\\Submitted.cshtml",
       "FileKind": "mvc"
     }
   ],
