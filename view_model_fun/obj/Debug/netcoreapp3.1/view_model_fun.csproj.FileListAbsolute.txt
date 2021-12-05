@@ -29,4 +29,6 @@ C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\Razor\Views
 C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\view_model_fun.RazorTargetAssemblyInfo.cs
 C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\view_model_fun.Views.pdb
 C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\view_model_fun.csproj.CopyComplete
-C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\Razor\Views\Home\Users.cshtml.g.cs
+C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\Razor\Views\Home\Userlist.cshtml.g.cs
+C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\Razor\Views\Home\Singleuser.cshtml.g.cs
+C:\Users\randy\dotnetprojects\view_model_fun\obj\Debug\netcoreapp3.1\Razor\Views\Home\Numbers.cshtml.g.cs

@@ -1,37 +1,54 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using view_model_fun.Models;
 
-namespace view_model_fun    //be sure to use your own project's namespace!
+namespace view_model_fun.Controllers
 {
     public class HomeController : Controller
     {
-        public List<User> CreateUsers()
+        public List<Username> CreateUsers()
         {
-            return new List<User>()
+            return new List<Username>()
             {
-                new User(){ Name="Moose"},
-                new User(){ Name="Sarah"},
-                new User(){ Name="Jerry"},
-                new User(){ Name="Rene"},
-                new User(){ Name="Barbarah"}
+                new Username(){ name ="Moose"},
+                new Username(){ name ="Sarah"},
+                new Username(){ name ="Jerry"},
+                new Username(){ name ="Rene"},
+                new Username(){ name ="Barbarah"}
             };
         }
 
-        [HttpGet]
-        [Route("")]
+        [HttpGet("")]
         public IActionResult Index()
         {
-            string stringModel = "My message is here, this is a simple string that I am using as a model";
+            string stringModel = "Beep, Bop, Boop";
 
             return View("Index", stringModel);
         }
 
-        [HttpGet("users")]    
-        public IActionResult Users()
-        {
+        [HttpGet("userlist")]
+        public IActionResult Userlist()
+        {
             var users = CreateUsers();
             return View(users);
+        }
+
+        [HttpGet("user")]
+        public IActionResult SingleUser()
+        {
+            var rand = new Random();
+            var users = CreateUsers();
+
+            var user = users[rand.Next(users.Count)];
+            return View(user);
+        }
+
+        [HttpGet("numbers")]
+        public IActionResult Numbers()
+        {
+            int[] numbers = new int[]{4,5,-7, 100, 125};
+            return View(numbers);
         }
     }
 }
