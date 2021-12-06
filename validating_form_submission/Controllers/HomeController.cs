@@ -24,10 +24,16 @@ namespace validating_form_submission.Controllers
         }
 
         [HttpPost("")]
-
         public ViewResult Submitted()
-        {            
-            return View();
+        {
+            if(ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                return View("Privacy");
+            }
         }
 
         public IActionResult Privacy()

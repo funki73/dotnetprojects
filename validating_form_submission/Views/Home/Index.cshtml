@@ -14,7 +14,8 @@
     <h1>Enter your information</h1>
         <form class="row g-3" asp-action="Submitted">
             <div class="col-md-6">
-                <label asp-for="FirstName" class="form-label" name="FirstName">First Name:</label>
+                <span asp-validation-for="FirstName"></span>
+                <label asp-for="FirstName" class="form-label" name="FirstName"></label>
                 <input asp-for="FirstName">
             </div>
 
