@@ -1,39 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using validating_form_submission.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace validating_form_submission.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        // private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        // public HomeController(ILogger<HomeController> logger)
+        // {
+        //     _logger = logger;
+        // }
 
         public IActionResult Index()
         {
             return View();
         }
 
-        [HttpPost("")]
-        public ViewResult Submitted()
+        [HttpPost("submit")]
+        public ViewResult Submitted(Form user)
         {
             if(ModelState.IsValid)
             {
-                return View();
+                return View("Submitted");
             }
-            else
-            {
-                return View("Privacy");
-            }
+            return View("Index");
+        }
+
+        [HttpGet("submitted")]
+
+        public ViewResult Success()
+        {
+            return View();
         }
 
         public IActionResult Privacy()
@@ -41,10 +40,10 @@ namespace validating_form_submission.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        // [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        // public IActionResult Error()
+        // {
+        //     return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        // }
     }
 }

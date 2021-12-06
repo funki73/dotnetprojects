@@ -1,4 +1,4 @@
-﻿@model validating_form_submission.Controllers.Form;
+﻿@model Form
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
             <div class="col-md-6">
                 <span asp-validation-for="FirstName"></span>
                 <label asp-for="FirstName" class="form-label" name="FirstName"></label>
-                <input asp-for="FirstName">
+                <input class="form-control" asp-for="FirstName">
             </div>
 
             <div class="col-md-6">

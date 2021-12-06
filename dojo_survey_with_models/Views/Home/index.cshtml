@@ -14,32 +14,37 @@
     
     <div class = "container mt-5">
         <h1>Dojo Survey</h1>
-        <form class="row g-3" asp-action="SurveySuFormSubmissionbmission">
+        <form class="row g-3" asp-action="SurveySubmission">
             <div class="col-md-6">
+                <span asp-validation-for="Name"></span>
                 <label asp-for="Name" class="form-label" name="Name"></label>
                 <input asp-for="Name">
                 
             </div>
             <div class="col-md-12">
-                <label for="floatingInput">Dojo Location:</label>
-                <select asp-type="Dojolocation" class="form-select" class="input-group-text" for="inputGroupSelect01" name="favoritelanguage">
-                    <option selected>Choose...</option>
+                <span asp-validation-for="Dojolocation"></span>
+                <label for="floatingInput" asp-for="Dojolocation"></label>
+                <select asp-for="Dojolocation" class="form-select" class="input-group-text" for="inputGroupSelect01">
+                    <option selected></option>
                     <option value="Seattle">Seattle</option>
                     <option value="Bellevue">Bellevue</option>
                     </select>
             </div>
             <div class="col-md-12">
-                <label for="floatingInput">Favorite Language:</label>
-                <select asp-type="Favoritelanguage" class="form-select" id="dojolocation" class="input-group-text" for="inputGroupSelect01" name="dojolocation">
-                    <option selected>Choose...</option>
+                <span asp-validation-for="Favoritelanguage"></span>
+                <label for="floatingInput" asp-for="Favoritelanguage"></label>
+                <select asp-for="Favoritelanguage" class="form-select" id="dojolocation" class="input-group-text" for="inputGroupSelect01">
+                    <option selected></option>
                     <option value="C#">C#</option>
                     <option value="Python">Python</option>
                     </select>
             </div>
             <div class="col-md-12">
-                <label for="comments" class="form-label" name="comments">Comments (optional)</label>
+                <span asp-validation-for="Comments"></span>
+                <label for="comments" class="form-label" name="comments" asp-for="Comments"></label>
                 <textarea type="text" class="form-control" asp-for="Comments" rows="3"></textarea>
             </div>
+
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary">Send</button>
             </div>

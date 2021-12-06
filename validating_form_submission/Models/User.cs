@@ -1,13 +1,13 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using validating_form_submission;
 
-namespace validating_form_submission.Controllers
+namespace validating_form_submission.Models
 {
     public class Form
     {
         [Display(Name = "First Name:")]
         [Required]
+        [MinLength(4, ErrorMessage="Field must be 4 characters or more")]
         public string FirstName {get;set;}
 
         [Display(Name = "Last Name:")]
@@ -24,7 +24,8 @@ namespace validating_form_submission.Controllers
         public string Emailaddress {get;set;}
         
         [Display(Name = "Password:")]
-        [Required]
+        [DataType(DataType.Password)]
+        [MinLength(8, ErrorMessage="Field must be 8 characters or more")]
         public string Password {get;set;}
 
         public Form(string firstname, string lastname, int age, string emailaddress, string password)

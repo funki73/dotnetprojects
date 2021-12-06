@@ -1,6 +1,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace dojo_survey_with_models.Controllers
 {
     public class HomeController : Controller
@@ -10,12 +11,19 @@ namespace dojo_survey_with_models.Controllers
         {
             return View();
         }
-        [HttpPost("/survey/submission")]
+
+
+        [HttpPost("/surveysubmission")]
         public ViewResult SurveySubmission(Survey fromForm)
         {
-            // Survey toRender = new Survey(name, favoritelanguage, dojolocation, comments);
-
-            return View(fromForm);
+        if(ModelState.IsValid)
+            {
+                return View(fromForm);
+            }
+        else
+            {
+                return View("Index");
+            }
         }
     }
 }
