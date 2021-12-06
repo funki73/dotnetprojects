@@ -14,7 +14,7 @@ namespace dojo_survey_with_models.Controllers
 
 
         [HttpPost("/surveysubmission")]
-        public ViewResult SurveySubmission(Survey fromForm)
+        public IActionResult SurveySubmission(Survey fromForm)
         {
         if(ModelState.IsValid)
             {
