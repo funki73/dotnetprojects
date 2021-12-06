@@ -2,43 +2,33 @@ using System;
 
 namespace wizard_ninja_samurai
 {
-    class Wizard
+    class Wizard : Human
     {
-        public string Name;
-        public int Strength;
-        public int Intelligence;
-        public int Dexterity;
-        private int health;
+        public Wizard(string name) : base(name, 3, 25, 3, 50){}
+        
+        public override int Attack(Human target)
+        {
+        // Provide an override Attack method to Wizard, which reduces the target by 5 * Intelligence 
+        //and heals the Wizard by the amount of damage dealt
+            int cast = base.Attack(target, Intelligence * 5);
+            health -= cast;
+            return cast;
+        }
+        public void Heal(Human target)
+        {
+            // Wizard should have a method called Heal, which when invoked, heals a target Human by 
+            // 10 * Intelligence
+            int healttl = 10 * Intelligence;
+            target.Health += healttl;
+        }
 
-        private int intelligence;
-
-        public int Health
-        {
-            get { return health; }
-        }
-        public Wizard(string name)
-        {
-            Name = name;
-            Strength = 0;
-            Intelligence = 25;
-            Dexterity = 0;
-            health = 50;
-        }
-        public Wizard(string name, int str, int intel, int dex, int hp)
-        {
-            Name = name;
-            Strength = str;
-            Intelligence = intel;
-            Dexterity = dex;
-            health = hp;
-        }
-        public int Attack(Wizard target)
-        {
-            int dmg = Intelligence * 5;
-            target.intelligence -= dmg;
-            wizard.intel += dmg;
-            Console.WriteLine($"{Name} attached {target.Name} for {dmg} damage});
-            return target.intelligence;
-        }
+        // public int Attack(Wizard target)
+        // {
+        //     int dmg = Intelligence * 5;
+        //     target.intelligence -= dmg;
+        //     wizard.intel += dmg;
+        //     Console.WriteLine($"{Name} attached {target.Name} for {dmg} damage});
+        //     return target.intelligence;
+        // }
     }
 }

@@ -8,7 +8,7 @@ namespace wizard_ninja_samurai
         public int Strength;
         public int Intelligence;
         public int Dexterity;
-        private int health;
+        public int health;
 
         public int Health
         {
@@ -31,7 +31,7 @@ namespace wizard_ninja_samurai
             Dexterity = dex;
             health = hp;
         }
-        public int Attack(Human target)
+        public virtual int Attack(Human target)
         {
         int dmg = Strength * 3;
         target.health -= dmg;
