@@ -82,7 +82,9 @@ class Node {
 class LinkedListStack {
     constructor() {
         this.head = null;
+        this.length=0;
     }
+
     /**
      * Adds a new given item to the top / back of this stack.
      * - Time: O(?)
@@ -90,30 +92,18 @@ class LinkedListStack {
      * @param {any} item The new item to be added to the top / back.
      * @returns {number} The new length of this stack.
      */
-    push(item) {
-
-        // create new node temp and allocate memory
-        let temp = new Node();
+    push(item) { 
         
-        // check if stack (heap) is full. Then inserting an
-        //  element would lead to stack overflow
-        if (temp == null) {
-            document.write("<br>Heap Overflow");
-            return;
+        if (this.isEmpty()){
+            this.head = new Node(item)
+            this.length +=1
+            return this.length
         }
-        
-        // initialize data into temp data field
-        temp.data = item;
-        
-        // put top reference into temp link
-        temp.link = this.head;
-        
-        // update top reference
-        this.head = temp;
-    }
-        isEmpty()
-    {
-        return this.head == null;
+        let newHead = new Node(item)
+        newHead.next = this.head
+        this.head = newHead
+        this.length+=1
+        return this.length;
     }
 
     /**
@@ -122,7 +112,16 @@ class LinkedListStack {
      * - Space: O(?)
      * @returns {any} The removed item or null if this stack was empty.
      */
-    pop() { }
+    pop() { 
+        if(this.isEmpty()){
+            return null
+        }
+        let oldhead = this.head
+        this.head = this.head.next
+        this.length -=1
+        return oldhead
+
+    }
 
     /**
      * Retrieves the top / last item from this stack without removing it.
@@ -130,7 +129,9 @@ class LinkedListStack {
      * - Space: O(?)
      * @returns {any} The top / last item of this stack or null if empty.
      */
-    peek() { }
+    peek() { 
+        return this.head
+    }
 
     /**
      * Returns whether or not this stack is empty.
@@ -139,7 +140,9 @@ class LinkedListStack {
      * @returns {boolean}
 
      */
-    isEmpty() { }
+    isEmpty() { 
+        return this.length==0;
+    }
 
     /**
      * Returns the size of this stack.
@@ -147,5 +150,30 @@ class LinkedListStack {
      * - Space: O(?)
      * @returns {number} The length.
      */
-    size() { }
+    size() { 
+        return this.length
+    }
+
+    toArr() {
+        const arr = [];
+        let runner = this.head;
+
+        while (runner) {
+            arr.push(runner.data);
+            runner = runner.next;
+        }
+        return arr;
+    }
 }
+
+
+var stack1 = new LinkedListStack();
+// console.log(stack1.isEmpty())
+stack1.push(10)
+// console.log(stack1.isEmpty())
+stack1.push(11)
+stack1.push(8)
+console.log(stack1.toArr())
+stack1.pop()
+console.log(stack1.toArr())
+console.log(stack1.peek().data)
