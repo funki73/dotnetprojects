@@ -3,21 +3,119 @@
     <div class="card-body">
         <p>Using the SportsORM, complete all the following queries and show their results on Level1.cshtml.</p>
         <ol>
-            <li>...all womens' leagues</li>
-            <li>...all leagues where sport is any type of hockey</li>
-            <li>...all leagues where sport is something OTHER THAN football</li>
-            <li>...all leagues that call themselves "conferences"</li>
-            <li>...all leagues in the Atlantic region</li>
-            <li>...all teams based in Dallas</li>
-            <li>...all teams named the Raptors</li>
-            <li>...all teams whose location includes "City"</li>
-            <li>...all teams whose names begin with "T"</li>
-            <li>...all teams, ordered alphabetically by location</li>
-            <li>...all teams, ordered by team name in reverse alphabetical order</li>
-            <li>...every player with last name "Cooper"</li>
-            <li>...every player with first name "Joshua"</li>
-            <li>...every player with last name "Cooper" EXCEPT those with "Joshua" as the first name</li>
-            <li>...all players with first name "Alexander" OR first name "Wyatt"</li>
+            <h6>All Women's League</h6>
+            @foreach(var l in ViewBag.WomensLeagues)
+            {
+                <ul>
+                @l.Name
+                </ul>
+            }
+            <h6>Hockey League</h6>
+            @foreach(var l in ViewBag.HockeyLeagues)
+            {
+                <ul>
+                @l.Name
+                </ul>
+            }
+            <h6>Non-Football League</h6>
+            @foreach(var l in ViewBag.NonFootballLeagues)
+            {
+                <ul>
+                @l.Name
+                </ul>
+            }
+            <h6>Conference League</h6>
+            @foreach(var l in ViewBag.Conferences)
+            {
+                <ul>
+                @l.Name
+                </ul>
+            }
+            <h6>Atlantic Region League</h6>
+            @foreach(var l in ViewBag.AtlanticRegion)
+            {
+                <ul>
+                @l.Name
+                </ul>
+            }
+            <h6>Dallas Teams</h6>
+            @foreach(var t in ViewBag.DallasTeams)
+            {
+                <ul>
+                @t.Location
+                @t.TeamName
+                </ul>
+            }
+            <h6>Team Raptor</h6>
+            @foreach(var t in ViewBag.TeamRaptor)
+            {
+                <ul>
+                @t.Location
+                @t.TeamName
+                </ul>
+            }
+            <h6>Teams with "City"</h6>
+            @foreach(var t in ViewBag.TeamswithCity)
+            {
+                <ul>
+                @t.TeamName
+                @t.Location
+                </ul>
+            }
+            <h6>Teams with Cap T</h6>
+            @foreach(var t in ViewBag.TeamswithcapT)
+            {
+                <ul>
+                @t.TeamName
+                </ul>
+            }
+            <h6>Teams Ordered by Location</h6>
+            @foreach(var t in ViewBag.TeamsOrdLoc)
+            {
+                <ul>
+                @t.TeamName
+                @t.Location
+                </ul>
+            }
+
+            <h6>Team Name Reverse Alphabetical Order</h6>
+            @foreach(var t in ViewBag.TeamsOrdNamRev)
+            {
+                <ul>
+                @t.TeamName
+                </ul>
+            }
+
+            <h6>Last Name Cooper</h6>
+            @foreach(var t in ViewBag.LastNameCooper)
+            {
+                <ul>
+                @t.FirstName
+                </ul>
+            }
+            <h6>First Name Joshua</h6>
+            @foreach(var t in ViewBag.FirstNameJoshua)
+            {
+                <ul>
+                @t.FirstName
+                @t.LastName
+                </ul>
+            }
+            <h6>Last Name Cooper Except Joshua</h6>
+            @foreach(var t in ViewBag.LastNameCooperexceptJoshua)
+            {
+                <ul>
+                @t.FirstName
+                </ul>
+            }
+            <h6>First Name Alexander or Wyatt</h6>
+            @foreach(var t in ViewBag.FirstNameAlexanderWyatt)
+            {
+                <ul>
+                @t.FirstName
+                @t.LastName
+                </ul>
+            }
         </ol>
     </div>
 </div>
