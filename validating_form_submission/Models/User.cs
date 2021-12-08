@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace validating_form_submission.Models
+namespace validating_form_submission
 {
     public class Form
     {
@@ -27,6 +27,8 @@ namespace validating_form_submission.Models
         [DataType(DataType.Password)]
         [MinLength(8, ErrorMessage="Field must be 8 characters or more")]
         public string Password {get;set;}
+
+        public Form(){}
 
         public Form(string firstname, string lastname, int age, string emailaddress, string password)
         {

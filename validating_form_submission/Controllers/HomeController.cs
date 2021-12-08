@@ -16,9 +16,9 @@ namespace validating_form_submission.Controllers
         {
             if(ModelState.IsValid)
             {
-                return View("Submitted");
+                return View();
             }
-            return View("Index");
+            return View();
         }
 
         [HttpGet("submitted")]

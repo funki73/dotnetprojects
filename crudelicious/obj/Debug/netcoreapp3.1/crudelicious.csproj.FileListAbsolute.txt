@@ -42,7 +42,6 @@ C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.TagHelpers.input.cache
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.TagHelpers.output.cache
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.RazorCoreGenerate.cache
-C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.RazorTargetAssemblyInfo.cache
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.RazorTargetAssemblyInfo.cs
@@ -53,3 +52,7 @@ C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\staticwebasse
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.dll
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.pdb
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.genruntimeconfig.cache
+C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
+C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\New.cshtml.g.cs
+C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Show.cshtml.g.cs
+C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
