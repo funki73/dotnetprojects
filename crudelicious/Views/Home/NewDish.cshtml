@@ -1,4 +1,4 @@
-@model crudelicious.Dish;
+@model crudelicious.Models.Dish
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
         </div>
         <div class="col-4">
             <div class="main">
-                <form class="row g-3" asp-action="/newdish/create">
+                <form class="row g-3" asp-action="Show">
                     <div class="col-md-6">
                         <span asp-validation-for="Chef"></span>
                         <label asp-for="Chef" class="form-label" name="Chef"></label>

@@ -18,6 +18,7 @@ namespace crudelicious
         [HttpGet("")]
         public ViewResult Index()
         {
+            // ViewBag.Dishes = _context.Dishes.OrderByDescending(dish => dish.UpatedAt).ToList();
             return View();
         }
 
@@ -28,26 +29,73 @@ namespace crudelicious
         }
 
         [HttpPost("/newdish/create")]
-        public IActionResult NewDish(Dish fromForm)
+        public IActionResult Show(Dish fromForm)
         {
         if(ModelState.IsValid)
             {
                 _context.Add(fromForm);
                 _context.SaveChanges();
-                return View("Show");
+
+                return RedirectToAction("Show", new{ dishId = fromForm.DishId});
             }
         else
             {
                 return View();
             }
         }
-        // [HttpGet("/show/{dishId}")]
-        // public IActionResult Show(int dishId)
-        // {
-        //     Dish toRender = _context.Dishes.FirstOrDefault( dish => dish.DishId == dishId);
 
-        //     return View(toRender);
-        //     ****new{ dishId = fromForm.DishId})
-        // }
+        [HttpGet("/newdish/create/{dishId}")]
+        public IActionResult Show(int dishId)
+        {
+            Dish toRender = _context.Dishes.FirstOrDefault( dish => dish.DishId == dishId);
+            return View(toRender);
+        }
+
+
+        [HttpGet("/newdish/delete/{dishId}")]
+        public RedirectToActionResult DeleteDish(int dishId)
+        {
+            Dish toDelete = _context.Dishes.FirstOrDefault ( dish => dish.DishId == dishId);
+            
+            _context.Dishes.Remove(toDelete);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet("newdish/edit/{dishId}")]
+        public IActionResult Edit(int dishId)
+        { 
+            Dish toEdit = _context.Dishes.FirstOrDefault ( dish => dish.DishId == dishId);
+
+                if(toEdit == null)
+                {
+                    return RedirectToAction ("Index");
+                }
+
+                return View(toEdit);
+        }
+
+        [HttpPost("dish/update/{dishId}")]
+        public IActionResult UpdateDish(int dishId, Dish fromForm)
+        {
+            if(ModelState.IsValid)
+            {
+                Dish inDb = _context.Dishes.FirstOrDefault ( dish => dish.DishId == dishId);
+
+                inDb.Chef = fromForm.Chef;
+                inDb.DishName = fromForm.DishName;
+                inDb.NumCalories = fromForm.NumCalories;
+                inDb.Tastiness = fromForm.Tastiness;
+                inDb.Description = fromForm.Description;
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Show", new { dishId = dishId });
+            }
+            else
+            {
+                return View("Edit");
+            }
+        }
     }
 }

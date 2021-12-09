@@ -1,3 +1,4 @@
+@model crudelicious.Models.Dish
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
 </head>
 <body>
     <div class = "container mt-5">
-        <h1>Welcome to CRUDelicious</h1>
+        <h1>Edit Dish: @Model.DishName</h1>
         <div class = "navbar">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
@@ -18,12 +19,45 @@
                 </li>
         </div>
         <div class="col-4">
-            <h1>Check out some recent dishes/h1>
             <div class="main">
-                <h1>List</h1>
-
+                <form class="row g-3" asp-action="UpdateDish">
+                    <div class="col-md-6">
+                        <span asp-validation-for="Chef"></span>
+                        <label asp-for="Chef" class="form-label" name="Chef"></label>
+                        <input asp-for="Chef">
+                    </div>
+                    <div class="col-md-6">
+                        <span asp-validation-for="DishName"></span>
+                        <label asp-for="DishName" class="form-label" name="DishName"></label>
+                        <input asp-for="DishName">
+                    </div>
+                    <div class="col-md-6">
+                        <span asp-validation-for="NumCalories"></span>
+                        <label asp-for="NumCalories" class="form-label" name="NumCalories"></label>
+                        <input asp-for="NumCalories">
+                    </div>
+                    <div class="col-md-12">
+                        <span asp-validation-for="Tastiness"></span>
+                        <label for="floatingInput" asp-for="Tastiness"></label>
+                        <select asp-for="Tastiness" class="form-select" class="input-group-text" for="inputGroupSelect01">
+                            <option selected></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            </select>
+                    </div>
+                    <div class="col-md-12">
+                        <span asp-validation-for="Description"></span>
+                        <label for="Description" class="form-label" name="Description" asp-for="Description"></label>
+                        <textarea type="text" class="form-control" asp-for="Description" rows="3"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Upate Dish</button>
+                    </div>
+                </form>
             </div>
-        </div>
     </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@model crudelicious.Dish;
+@model crudelicious.Models.Dish
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +38,8 @@
                 </div>
             </div>
         </div>
+        <a href="/newdish/delete/@Model.DishId">Delete Dish</a>
+        <a href="/newdish/edit/@Model.DishId">Edit Dish</a>
     </div>
 </body>
 </html>

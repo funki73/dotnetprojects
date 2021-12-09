@@ -2,7 +2,7 @@ using System;
 using crudelicious;
 using System.ComponentModel.DataAnnotations;
 
-namespace crudelicious
+namespace crudelicious.Models
 {
     public class Dish
     {

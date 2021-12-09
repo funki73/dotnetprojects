@@ -1,3 +1,5 @@
+@model crudelicious.Models.Dish;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +20,22 @@
                 </li>
         </div>
         <div class="col-4">
-            <h1>Check out some recent dishes/h1>
+            <h1>Check out some recent dishes</h1>
             <div class="main">
-                <h1>List</h1>
-
+            <table>
+                <tr>
+                    <th>Dish Name</th>
+                    <th>Chef Name</th>
+                </tr>
+                <tr>
+                    @* @foreach(var dish in Model)
+                    {
+                <tr>  
+                    <td>@dish.DishName</td>
+                    <td>@dish.Chef</td>
+                </tr>    
+                } *@
+                </table>
             </div>
         </div>
     </div>
