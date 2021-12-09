@@ -53,6 +53,6 @@ C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.pdb
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\crudelicious.genruntimeconfig.cache
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
-C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\New.cshtml.g.cs
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Show.cshtml.g.cs
 C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\randy\dotnetprojects\crudelicious\obj\Debug\netcoreapp3.1\Razor\Views\Home\NewDish.cshtml.g.cs

@@ -1,3 +1,4 @@
+@model crudelicious.Dish;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +11,31 @@
 </head>
 <body>
     <div class = "container mt-5">
-        <h1>Welcome to CRUDelicious</h1>
-        @* <div class = "navbar">
+        <div class = "navbar">
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
         </div>
         <div class="col-4">
-            <h1>Check out some recent dishes/h1>
-            <div class="main">
-                <h1>List</h1> *@
-
+            <div class="col-4">
+                <div class="main">
+                    <div class="col-md-6">
+                        <h1>@Model.Chef<h1>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>@Model.DishName</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.Description</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>@Model.NumCalories</p>
+                    </div>
+                    <div class="col-md-6">
+                        @Model.Tastiness
+                    </div>
+                </div>
             </div>
         </div>
     </div>

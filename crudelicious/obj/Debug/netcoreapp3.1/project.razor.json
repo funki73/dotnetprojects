@@ -14417,8 +14417,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\crudelicious\\Views\\Home\\New.cshtml",
-      "TargetPath": "Views\\Home\\New.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\crudelicious\\Views\\Home\\NewDish.cshtml",
+      "TargetPath": "Views\\Home\\NewDish.cshtml",
       "FileKind": "mvc"
     },
     {

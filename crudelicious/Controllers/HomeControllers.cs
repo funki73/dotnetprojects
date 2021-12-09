@@ -3,34 +3,51 @@
 	using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
     using crudelicious.Models;
+    using System.Linq;
 
 namespace crudelicious
 {
     public class HomeController : Controller
     {
+        private MyContext _context;
+        public HomeController(MyContext context)
+        {
+            _context = context;
+        }
+
         [HttpGet("")]
         public ViewResult Index()
         {
             return View();
         }
 
-        [HttpGet("New")]
-        public ViewResult New()
+        [HttpGet("newdish")]
+        public ViewResult NewDish()
         {
             return View();
         }
 
-        [HttpPost("/surveysubmission")]
-        public IActionResult SurveySubmission(Dish fromForm)
+        [HttpPost("/newdish/create")]
+        public IActionResult NewDish(Dish fromForm)
         {
         if(ModelState.IsValid)
             {
-                return View(fromForm);
+                _context.Add(fromForm);
+                _context.SaveChanges();
+                return View("Show");
             }
         else
             {
-                return View("Index");
+                return View();
             }
         }
+        // [HttpGet("/show/{dishId}")]
+        // public IActionResult Show(int dishId)
+        // {
+        //     Dish toRender = _context.Dishes.FirstOrDefault( dish => dish.DishId == dishId);
+
+        //     return View(toRender);
+        //     ****new{ dishId = fromForm.DishId})
+        // }
     }
 }
