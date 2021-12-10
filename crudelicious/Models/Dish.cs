@@ -24,7 +24,8 @@ namespace crudelicious.Models
 
         [Display(Name = "Number of Calories: " )]
         [Required]
-        public string NumCalories { get; set; }
+        [MinLength(0, ErrorMessage="Field must be 0 more")]
+        public int NumCalories { get; set; }
         
         [Display(Name = "Description: " )]
         [Required]

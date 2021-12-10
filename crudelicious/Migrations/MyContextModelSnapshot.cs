@@ -17,7 +17,7 @@ namespace crudelicious.Migrations
                 .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("crudelicious.Dish", b =>
+            modelBuilder.Entity("crudelicious.Models.Dish", b =>
                 {
                     b.Property<int>("DishId")
                         .ValueGeneratedOnAdd()
@@ -31,13 +31,15 @@ namespace crudelicious.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("DishName")
+                        .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<string>("NumCalories")
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+                    b.Property<int>("NumCalories")
+                        .HasColumnType("int");
 
                     b.Property<int>("Tastiness")
                         .HasColumnType("int");
