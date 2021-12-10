@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.EntityFrameworkdCore;
+using registration_login.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace registration_login
 {

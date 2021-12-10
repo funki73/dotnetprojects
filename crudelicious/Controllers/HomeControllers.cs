@@ -41,7 +41,7 @@ namespace crudelicious
             }
         else
             {
-                return View();
+                return View("newdish");
             }
         }
 

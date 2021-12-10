@@ -6,27 +6,53 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
+using registration_login.Models;
+using Microsoft.AspNetCore.Identity;
 
-namespace login_registration
+namespace registration_login.Controllers
 {
     public class HomeController : Controller
     {
         private MyContext _context;
-    
         public HomeController(MyContext context)
         {
             _context = context;
         }
-    
-        [HttpGet("")]
-        public IActionResult Index()
-        {
-            List<Monster> AllMonsters = _context.Monsters.ToList();
-            
-            return View();
-        }
+
         [HttpGet("")]
         public ViewResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost("register")]
+        public IActionResult Register(User user)
+        {
+        if(ModelState.IsValid)
+            {
+                if(_context.Users.Any(u => u.Email == user.Email))
+                {
+                    ModelState.AddModelError("Email", "Email already in use!");
+                    return View();
+                }
+                else
+                { 
+                return View("Index");
+                }
+            }
+        }           
+
+        public IActionResult Method(User user)
+        {
+            if(ModelState.IsValid)
+            {
+                PasswordHasher<User> Hasher = new PasswordHasher<User>();
+                user.Password = Hasher.HashPassword(user, user.Password);
+            }
+        }
+
+        [HttpGet("login")]
+        public ViewResult Login()
         {
             return View();
         }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace login_registration.Models
+namespace registration_login.Models
 {
     public class User
     {
@@ -36,6 +36,5 @@ namespace login_registration.Models
         [Compare("Password")]
         [DataType(DataType.Password)]
         public string Confirm {get;set;}
-
         }
 }
