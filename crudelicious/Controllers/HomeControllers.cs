@@ -18,8 +18,9 @@ namespace crudelicious
         [HttpGet("")]
         public ViewResult Index()
         {
-            // ViewBag.Dishes = _context.Dishes.OrderByDescending(dish => dish.UpatedAt).ToList();
-            return View();
+            List<Dish> dishes = _context.Dishes.OrderByDescending(dish => dish.UpatedAt).ToList();
+            // List<Dish> dishes = _context.Dishes.ToList();
+            return View(dishes);
         }
 
         [HttpGet("newdish")]

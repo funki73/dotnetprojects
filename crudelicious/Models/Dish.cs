@@ -1,5 +1,6 @@
 using System;
 using crudelicious;
+using System.Collections;
 using System.ComponentModel.DataAnnotations;
 
 namespace crudelicious.Models
