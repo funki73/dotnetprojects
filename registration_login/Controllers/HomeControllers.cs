@@ -28,19 +28,25 @@ namespace registration_login.Controllers
         [HttpPost("register")]
         public IActionResult Register(User user)
         {
-        if(ModelState.IsValid)
+            if(ModelState.IsValid)
             {
                 if(_context.Users.Any(u => u.Email == user.Email))
                 {
-                    ModelState.AddModelError("Email", "Email already in use!");
-                    return View();
+                ModelState.AddModelError("Email", "Email already in use!");
+                return View("Index");
                 }
                 else
                 { 
-                return View("Index");
+                    _context.Add(user);
+                    _context.SaveChanges();
+                    return View("Sucess");
                 }
+            }   
+            else
+            {
+            return View("Index");
             }
-        }           
+        }
 
         public IActionResult Method(User user)
         {
@@ -48,10 +54,14 @@ namespace registration_login.Controllers
             {
                 PasswordHasher<User> Hasher = new PasswordHasher<User>();
                 user.Password = Hasher.HashPassword(user, user.Password);
+
+                
+                _context.SaveChanges();
             }
+            return View("Index");
         }
 
-        [HttpGet("login")]
+        [HttpGet("Login")]
         public ViewResult Login()
         {
             return View();

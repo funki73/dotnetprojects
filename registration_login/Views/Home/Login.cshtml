@@ -1,3 +1,4 @@
+@model registration_login.Models.LoginUser;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +13,22 @@
         <div class=cointainer>
             <div class="col-4"></div>
                 <div class=login>
-                    <form action="/login" method="post">
+                    <form class="row g-2" asp-action="Login">
                         <h1>Login</h1>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email:</label>
-                            <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div class="col-md-2">
+                            <span asp-validation-for="Email"></span>
+                            <label asp-for="Email" class="form-label" name="Email"></label>
+                            <input asp-for="Email">
                         </div>
 
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                        <div class="col-md-2">
+                            <span asp-validation-for="Password"></span>
+                            <label asp-for="Password" class="form-label" name="Password"></label>
+                            <input asp-for="Password">
                         </div>
-
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <div>
+                        <button type="submit" class="btn btn-primary">Sign up Now</button>
+                        </div>
                     </form>
                 </div>
             </div>

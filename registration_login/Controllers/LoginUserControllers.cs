@@ -19,33 +19,30 @@ namespace registration_login.Controllers
         {
             _context = context;
         }
-        public IActionResult Method(User user)
+
+        [HttpPost("login")]
+        public IActionResult Login(LoginUser userSubmission)
         {
-            if(ModelState.IsValid)
-            {
-                PasswordHasher<User> Hasher = new PasswordHasher<User>();
-                user.Password = Hasher.HashPassword(user, user.Password);
-            }
-        }
-    public IActionResult Login(LoginUser userSubmission)
+        if(ModelState.IsValid)
         {
-            if(ModelState.IsValid)
-            {
-                var userInDb = _context.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
+            var userInDb = _context.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
+
                 if(userInDb == null)
                 {
                     ModelState.AddModelError("Email", "Invalid Email/Password");
-                    return View("SomeView");
+                    return View("Someview");
                 }
-                
+
                 var hasher = new PasswordHasher<LoginUser>();
                 
                 var result = hasher.VerifyHashedPassword(userSubmission, userInDb.Password, userSubmission.Password);
                 
                 if(result == 0)
                 {
+                    ModelState.AddModelError("Password", "Invalid Email/Password");
                 }
-            }
+        }
+        return View("Sucess");
         }
     }
 }

@@ -14420,6 +14420,11 @@
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Home\\Sucess.cshtml",
       "TargetPath": "Views\\Home\\Sucess.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Shared\\Sucess.cshtml",
+      "TargetPath": "Views\\Shared\\Sucess.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
