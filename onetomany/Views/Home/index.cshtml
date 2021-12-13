@@ -1,3 +1,4 @@
+@model List<Dish>;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,12 @@
                         <a class="nav-link" href="/dishes">Dishes</a>
                         <a class="nav-link" href="/newchef">Add a Chef</a>
                     </li>
+            </div>
+            <div class = "main">
+                @foreach(var dish in Model)
+                {
+                    <p>@dish.Creator.Name says: @dish.Content</p>
+                }
             </div>
         </div>
     </body>

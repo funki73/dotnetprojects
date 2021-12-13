@@ -12,6 +12,7 @@ namespace registration_login.Models
         public string Email { get; set;}
 
         [MinLength(8, ErrorMessage="Password must be 8 characters or longer!")]
+        [DataType(DataType.Password)]
         [Required]
         public string Password { get; set; }
         }

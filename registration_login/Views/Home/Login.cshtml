@@ -13,7 +13,7 @@
         <div class=cointainer>
             <div class="col-4"></div>
                 <div class=login>
-                    <form class="row g-2" asp-action="Login">
+                    <form class="row g-2" asp-action="Login" method="post">
                         <h1>Login</h1>
                         <div class="col-md-2">
                             <span asp-validation-for="Email"></span>
@@ -27,7 +27,7 @@
                             <input asp-for="Password">
                         </div>
                         <div>
-                        <button type="submit" class="btn btn-primary">Sign up Now</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                         </div>
                     </form>
                 </div>
