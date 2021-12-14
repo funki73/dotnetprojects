@@ -14402,6 +14402,11 @@
   "RootNamespace": "registration_login",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Home\\Success.cshtml",
+      "TargetPath": "Views\\Home\\Success.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -14414,11 +14419,6 @@
     {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Home\\Login.cshtml",
       "TargetPath": "Views\\Home\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\registration_login\\Views\\Home\\Sucess.cshtml",
-      "TargetPath": "Views\\Home\\Sucess.cshtml",
       "FileKind": "mvc"
     },
     {

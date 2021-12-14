@@ -7,6 +7,9 @@ namespace registration_login.Models
 {
     public class LoginUser
     {
+        [Key]
+        public int UserId { get; set; }
+        
         [EmailAddress]
         [Required]
         public string Email { get; set;}

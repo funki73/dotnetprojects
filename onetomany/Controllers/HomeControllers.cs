@@ -21,7 +21,7 @@ namespace onetomany
         [HttpGet("")]
         public IActionResult Index()
         {
-            List<Dish> dishesWithUser = dbMyContext.Dishes
+            List<Dish> dishesWithUser = _context.Dishes
             .Include(dish => dish.Creator)
             .ToList();
             return View(dishesWithUser);

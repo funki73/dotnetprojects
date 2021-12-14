@@ -24,6 +24,8 @@ namespace onetomany.Models
         public DateTime Dateofbirth { get; set; }
         public List<Dish> CreatedDishes {get; set; }
 
+        public int DishId {get; set;}
+
         public DateTime CreatedAt { get; set; } = DateTime.Now;
         public DateTime UpatedAt { get; set; } = DateTime.Now;
 

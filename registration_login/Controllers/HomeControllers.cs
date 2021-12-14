@@ -37,9 +37,13 @@ namespace registration_login.Controllers
                 }
                 else
                 { 
+                    PasswordHasher<User> Hasher = new PasswordHasher<User>();
+                    user.Password = Hasher.HashPassword(user, user.Password);
                     _context.Add(user);
                     _context.SaveChanges();
-                    return View("Sucess");
+
+                    HttpContext.Session.SetInt32("UserId", user.UserId);
+                    return RedirectToAction ("Success");
                 }
             }   
             else
@@ -61,10 +65,47 @@ namespace registration_login.Controllers
             return View("Index");
         }
 
-        [HttpGet("Login")]
+        [HttpGet("login")]
         public ViewResult Login()
         {
             return View();
+        }
+
+        [HttpPost("me")]
+        public IActionResult Logins(LoginUser userSubmission)
+        {
+            if(ModelState.IsValid)
+            {
+                User userInDb = _context.Users.FirstOrDefault(u => u.Email == userSubmission.Email);
+
+                if(userInDb == null)
+                {
+                        ModelState.AddModelError("Email", "Invalid Email/Password");
+                        return View("login");
+                }
+                    
+                    var hasher = new PasswordHasher<LoginUser>();
+                    
+                    var result = hasher.VerifyHashedPassword(userSubmission, userInDb.Password, userSubmission.Password);
+                    
+                    if(result == 0)
+                    {
+                        ModelState.AddModelError("Password", "Invalid Email/Password");
+                        return View("login");
+                    }
+                }
+        HttpContext.Session.SetInt32("UserId", userSubmission.UserId);
+        return View("success");
+        }
+
+        [HttpGet("Success")]
+        public IActionResult Sucess()
+        {
+            if (HttpContext.Session.GetInt32("UserId") == null)
+            {
+                return RedirectToAction("Index");
+            }
+                return View();
         }
     }
 }
