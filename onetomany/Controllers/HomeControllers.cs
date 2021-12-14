@@ -43,8 +43,8 @@ namespace onetomany
         [HttpGet("/newdishes")]
         public ViewResult Newdishes()
         {
-            List<Chef> Chefs = _context.Chefs.ToList();
-            return View(Chefs);
+            List<Chef> AllChefs = _context.Chefs.ToList();
+            return View(AllChefs);
         }
 
         [HttpPost("/newdish/add")]
@@ -55,12 +55,11 @@ namespace onetomany
                 _context.Add(fromForm);
                 _context.SaveChanges();
 
-                HttpContext.Session.SetInt32("DishId", fromForm.DishId);
-                return RedirectToAction("newdishes", new{ dishId = fromForm.DishId});
+            return RedirectToAction("newdishes", new{ dishId = fromForm.DishId});
             }
         else
             {
-                return View("newdishes");
+                return RedirectToAction("newdishes");
             }
         }
 

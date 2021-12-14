@@ -10,5 +10,6 @@ namespace onetomany.Models
     {
         public List<Chef> AllChefs {get; set;}
         public List<Dish> AllDishes {get; set;}
+
     }
 }

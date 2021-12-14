@@ -21,6 +21,7 @@ namespace onetomany.Models
 
         [Display(Name = "Date of Birth" )]
         [Required]
+        [DataType(DataType.Date)]
         public DateTime Dateofbirth { get; set; }
         public List<Dish> CreatedDishes {get; set; }
 
