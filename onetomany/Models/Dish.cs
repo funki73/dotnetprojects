@@ -16,7 +16,7 @@ namespace onetomany.Models
 
         [Display(Name = "Number of Calories: " )]
         [Required]
-        [Range(0, 500)]
+        [Range(0, 10000)]
         public int NumCalories { get; set; }
 
         [Display(Name = "Description: " )]
@@ -29,6 +29,7 @@ namespace onetomany.Models
 
         [Display(Name = "Tastiness: " )]
         [Required]
+        [Range(1, 5)]
         public int Tastiness { get; set; }
         public int ChefId { get; set; }
         public Chef Creator {get;set;}

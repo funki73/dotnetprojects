@@ -1,3 +1,6 @@
+@using onetomany.Models;
+@model IndexView;
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,31 @@
                         <a class="nav-link">Dishes</a>
                         <a class="nav-link" href="/newdishes">Add a Dish</a>
                     </li>
+            </div>
+            <div class = "main">
+                <h1>Check out our roster of Chefs!</h1>
+                <table>
+                    <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Chef</th>
+                                <th>Tastiness</th>
+                                <th>Calories</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Dish dish in Model.AllDishes)
+                            {
+                                <tr>
+                                    <td>@dish.DishName</td>
+                                    <td>@dish.ChefId</td>
+                                    <td>@dish.Tastiness</td>
+                                    <td>@dish.NumCalories</td>
+                                </tr>
+                            }
+                        </tbody>
+                </table>
             </div>
         </div>
     </body>

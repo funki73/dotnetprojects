@@ -1,4 +1,7 @@
-@model onetomany.Models.Dish;
+@using onetomany.Models;
+@model IndexView;
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +25,24 @@
                     </li>
             </div>
             <div class = "main">
-                @foreach(var dish in Model)
-                {
-                    <p>@dish.Creator.Name says: @dish.Content</p>
-                }
+                <h1>Check out our roster of Chefs!</h1>
+                <table>
+                    <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Chef chef in Model.AllChefs)
+                            {
+                                <tr>
+                                    <td>@chef.FirstName</td>
+                                    <td>@chef.Dateofbirth</td>
+                                </tr>
+                            }
+                        </tbody>
+                </table>
             </div>
         </div>
     </body>

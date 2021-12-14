@@ -19,24 +19,32 @@ namespace onetomany
         }
 
         [HttpGet("")]
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            List<Dish> dishesWithUser = _context.Dishes
-            .Include(dish => dish.Creator)
-            .ToList();
-            return View(dishesWithUser);
+            IndexView ViewModel = new IndexView
+            {
+                AllChefs = _context.Chefs.ToList(),
+                AllDishes = _context.Dishes.ToList()
+            };
+            return View(ViewModel);
         }
 
         [HttpGet("/dishes")]
         public ViewResult Dishes()
         {
-            return View();
+            IndexView ViewModel = new IndexView
+            {
+                AllChefs = _context.Chefs.ToList(),
+                AllDishes = _context.Dishes.ToList()
+            };
+            return View(ViewModel);
         }
 
         [HttpGet("/newdishes")]
         public ViewResult Newdishes()
         {
-            return View();
+            List<Chef> Chefs = _context.Chefs.ToList();
+            return View(Chefs);
         }
 
         [HttpPost("/newdish/add")]
@@ -47,6 +55,7 @@ namespace onetomany
                 _context.Add(fromForm);
                 _context.SaveChanges();
 
+                HttpContext.Session.SetInt32("DishId", fromForm.DishId);
                 return RedirectToAction("newdishes", new{ dishId = fromForm.DishId});
             }
         else
@@ -69,6 +78,7 @@ namespace onetomany
                 _context.Add(fromForm);
                 _context.SaveChanges();
 
+                HttpContext.Session.SetInt32("ChefId", fromForm.ChefId);
                 return RedirectToAction("newchef", new{ chefId = fromForm.ChefId});
             }
         else
