@@ -1,7 +1,9 @@
 using System;
 using onetomany;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace onetomany.Models
 {
@@ -23,10 +25,6 @@ namespace onetomany.Models
         [Required]
         public string Description { get; set; }
 
-        [Display(Name = "Chefe's Name: " )]
-        [Required]
-        public string Chef { get; set; }
-
         [Display(Name = "Tastiness: " )]
         [Required]
         [Range(1, 5)]
@@ -35,7 +33,10 @@ namespace onetomany.Models
         public Chef Creator {get;set;}
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpatedAt { get; set; } = DateTime.Now;
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+        [NotMapped]
+        public List<Chef> AllChefs {get;set;}
 
         }
 }

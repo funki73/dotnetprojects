@@ -1,4 +1,5 @@
-@model onetomany.Models.Dish
+@using onetomany.Models;
+@model Dish;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,15 +43,13 @@
 
                         <div class="col-md-12">
                             <span asp-validation-for="ChefId"></span>
-                            <label for="floatingInput" asp-for="ChefId">
-                            "></label>
-                            <select asp-for="ChefId" class="form-select" class="input-group-text" for="inputGroupSelect01">
-                                <option selected></option>
-                                <option value="Chef 1">Chef 1</option>
-                                <option value="Chef 2">Chef 2</option>
-                                <option value="Chef 3">Chef 3</option>
-                                <option value="Chef 4">Chef 4</option>
-                                </select>
+                            <label for="floatingInput" asp-for="ChefId"></label>
+                            <select asp-for="ChefId" class="input-group-text" for="inputGroupSelect01">
+                                @foreach(Chef chef in Model.AllChefs)
+                                {
+                                    <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+                                }
+                            </select>
                         </div>
 
                         <div class="col-md-12">

@@ -40,7 +40,7 @@ namespace onetomany.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<DateTime>("UpatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("ChefId");
@@ -53,10 +53,6 @@ namespace onetomany.Migrations
                     b.Property<int>("DishId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    b.Property<string>("Chef")
-                        .IsRequired()
-                        .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<int>("ChefId")
                         .HasColumnType("int");
@@ -78,7 +74,7 @@ namespace onetomany.Migrations
                     b.Property<int>("Tastiness")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("DishId");
