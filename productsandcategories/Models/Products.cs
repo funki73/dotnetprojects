@@ -24,6 +24,8 @@ namespace productsandcategories.Model
         public DateTime UpdatedAt = DateTime.Now;
 
         [NotMapped]
-        public List<Categories> AllCategories {get; set;}
+        public List<Products> AllProducts {get; set;}
+
+        public List<Associations> Associate {get; set;}
     }
 }

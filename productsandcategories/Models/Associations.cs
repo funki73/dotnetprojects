@@ -13,6 +13,10 @@ namespace productsandcategories.Model
 
         public int CategoryId {get;set;}
 
+        public Categories CatwithProd {get;set;}
+
+        public Products Prod {get;set;}
+
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
         

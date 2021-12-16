@@ -9,7 +9,20 @@ class Deck
         public Deck()
         {
             Cards = new List<Card>();
+            this.Reset();
+        }
 
+        public Card Deal()
+            {
+                Card card = Cards[0];
+                System.Console.WriteLine($"You were dealt {card.StringVal} of {card.Suit}");
+                Cards.RemoveAt(0);
+                return card;
+            }
+
+        public void Reset()
+        {
+            Cards.Clear();
             string[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
             string[] stringVal = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
             for(int i = 0; i < suits.Length; i++)
@@ -21,12 +34,23 @@ class Deck
                 }
             }
         }
-        public Card Deal()
+
+        public void Shuffle()
+        {
+            List<Card> cards = this.Cards;
+            List<Card> shuffled = new List<Card>();
+            Random card = new Random();
+            while(cards.Count > 0)
             {
-                Card card = Cards[0];
-                Cards.RemoveAt(0);
-                return card;
+                int idx = card.Next(0, cards.Count);
+                shuffled.Add(cards[idx]);
+                cards.RemoveAt(idx);
             }
+            this.Cards = shuffled;
+        }
+    }
+}
+
         // public List<Card> Reset()
         // {
         //     Card.Clear();
@@ -40,5 +64,3 @@ class Deck
         //         }
         //     }
         //     return Card;
-    }
-}

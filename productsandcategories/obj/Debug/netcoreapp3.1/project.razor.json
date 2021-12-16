@@ -14402,6 +14402,11 @@
   "RootNamespace": "productsandcategories",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\productsandcategories\\Views\\Home\\Addproduct.cshtml",
+      "TargetPath": "Views\\Home\\Addproduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\productsandcategories\\Views\\Home\\Categories.cshtml",
       "TargetPath": "Views\\Home\\Categories.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\productsandcategories\\Views\\Home\\Products.cshtml",
       "TargetPath": "Views\\Home\\Products.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\productsandcategories\\Views\\Home\\Addcategory.cshtml",
+      "TargetPath": "Views\\Home\\Addcategory.cshtml",
       "FileKind": "mvc"
     }
   ],

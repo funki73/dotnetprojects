@@ -18,14 +18,13 @@ namespace ProductAndCatagories.Controllers
         }
 
         [HttpGet("")]
-        public IActionResult Products(int productId)
+        public IActionResult Products()
         {
-            Productview ViewModel = new Productview
+            Products product = new Products()
             {
-                ToRender = _context.Products.Include(p => p.AllCategories).ThenInclude(a => a.Category).FirstOrDefault(p => p.ProductId == productId),
-                ToAdd = _context.Categories.Include(c => c.AllProducts).Where(a => !a.AllProducts.Any( cat => cat.ProductId == productId)).ToList()
+                AllProducts = _context.Products.ToList()
             };
-            return View(ViewModel);
+            return View (product);
         }
 
         [HttpPost("/addproduct")]
@@ -47,25 +46,39 @@ namespace ProductAndCatagories.Controllers
         [HttpGet("categories")]
         public IActionResult Categories()
         {
-            ViewBag.ListCategories = _context.Categories
-            return View();
+            Categories category = new Categories()
+            {
+                AllCategories = _context.Categories.ToList()
+            };
+            return View (category);
         }
 
         [HttpPost("addcategory")]
         public IActionResult addCategory(Categories fromForm)
             {
-            Console.WriteLine("Hello From Category");
             if(ModelState.IsValid)
                 {
                     _context.Add(fromForm);
                     _context.SaveChanges();
 
                     return RedirectToAction("categories");
+                }
+                else
+                {
+                    return View("categories");
+                }
             }
-            else
+
+        [HttpGet("products/{productId}")]
+        public IActionResult ProductInfo(int productId)
+        {
+            Productview ViewModel = new Productview()
             {
-                return View("categories");
-            }
+                ToRender = _context.Products.Include(p => p.).ThenInclude(a => a.CatwithProd).FirstOrDefault(p => p.ProductId == productId),
+                ToAdd = _context.Categories.Include(c => c.)
+            };
+
+            return View("ProductInfo", ViewModel);
         }
     }
 }
