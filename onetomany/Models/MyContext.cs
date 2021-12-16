@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using onetomany.Models;
 
 namespace onetomany.Models
-
 { 
     public class MyContext : DbContext 
     { 

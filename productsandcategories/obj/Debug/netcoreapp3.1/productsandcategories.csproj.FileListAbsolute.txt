@@ -42,8 +42,6 @@ C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\prod
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.TagHelpers.input.cache
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.TagHelpers.output.cache
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.RazorCoreGenerate.cache
-C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ViewImports.cshtml.g.cs
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.RazorTargetAssemblyInfo.cache
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.RazorTargetAssemblyInfo.cs
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.Views.pdb
@@ -53,3 +51,6 @@ C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\stat
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.dll
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.pdb
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\productsandcategories.genruntimeconfig.cache
+C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Categories.cshtml.g.cs
+C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Products.cshtml.g.cs
+C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
