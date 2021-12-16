@@ -6,6 +6,8 @@ namespace DeckOfCards
 class Deck
     {
         public List<Card> Cards;
+
+
         public Deck()
         {
             Cards = new List<Card>();
@@ -24,7 +26,7 @@ class Deck
         {
             Cards.Clear();
             string[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
-            string[] stringVal = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+            string[] stringVal = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
             for(int i = 0; i < suits.Length; i++)
             {
                 for(int j = 0; j < stringVal.Length; j++)
@@ -34,6 +36,20 @@ class Deck
                 }
             }
         }
+
+                // public List<Card> Reset()
+        // {
+        //     Card.Clear();
+        //     for(int i = 0; i < 4; i++)
+        //     {
+        //         int j = 1;
+        //         while(j < 14)
+        //         {
+        //             Card.Add(new Card(Card.Suits[i], j));
+        //             j++;
+        //         }
+        //     }
+        //     return Card;
 
         public void Shuffle()
         {
@@ -51,16 +67,3 @@ class Deck
     }
 }
 
-        // public List<Card> Reset()
-        // {
-        //     Card.Clear();
-        //     for(int i = 0; i < 4; i++)
-        //     {
-        //         int j = 1;
-        //         while(j < 14)
-        //         {
-        //             Card.Add(new Card(Card.Suits[i], j));
-        //             j++;
-        //         }
-        //     }
-        //     return Card;
