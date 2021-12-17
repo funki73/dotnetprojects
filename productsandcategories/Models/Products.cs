@@ -8,7 +8,6 @@ namespace productsandcategories.Model
     public class Products
     {
         [Key]
-        [Required]
         public int ProductId {get;set;}
 
         [Required]
@@ -22,12 +21,12 @@ namespace productsandcategories.Model
 
         public List<Associations> AssignedCategories {get; set;}
 
-        public List<Categories> AllCategories {get; set;}
-
         public DateTime CreatedAt = DateTime.Now;
         public DateTime UpdatedAt = DateTime.Now;
 
         [NotMapped]
         public List<Products> AllProducts {get; set;}
+        [NotMapped]
+        public List<Categories> AllCategories {get; set;}
     }
 }

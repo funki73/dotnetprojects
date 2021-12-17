@@ -26,7 +26,7 @@ namespace ProductAndCatagories.Controllers
             {
                 AllProducts = _context.Products.ToList()
             };
-            return View (product);
+            return View("Products", product);
         }
         //
         [HttpPost("newproduct")]
@@ -41,7 +41,7 @@ namespace ProductAndCatagories.Controllers
             }
             else
             {
-            return View("Products");
+            return Products();
             }
         }
         //
@@ -88,7 +88,7 @@ namespace ProductAndCatagories.Controllers
             {
                 AllCategories = _context.Categories.ToList()
             };
-            return View (category);
+            return View ("Categories", category);
         }
 
         [HttpPost("newcategory")]
@@ -103,7 +103,7 @@ namespace ProductAndCatagories.Controllers
                 }
                 else
                 {
-                    return View("categories");
+                    return Categories();
                 }
             }
 

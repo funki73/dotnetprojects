@@ -9,8 +9,8 @@ using productsandcategories.Model;
 namespace productsandcategories.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20211215164915_taketwo")]
-    partial class taketwo
+    [Migration("20211217180235_migrationdb5")]
+    partial class migrationdb5
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -38,6 +38,10 @@ namespace productsandcategories.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("AssociationId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Associations");
                 });
@@ -83,6 +87,21 @@ namespace productsandcategories.Migrations
                     b.HasKey("ProductId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("productsandcategories.Model.Associations", b =>
+                {
+                    b.HasOne("productsandcategories.Model.Categories", "CatwithProd")
+                        .WithMany("AssignedProducts")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("productsandcategories.Model.Products", "ProdwithCat")
+                        .WithMany("AssignedCategories")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -21,7 +21,7 @@
         <div class = "container mt-5">
             <div class="col-6">
                 <h1>Product:  @Display.Name</h1>
-                <h2>Associated Categories:</h2>
+                <h2>Associated Categories: </h2>
                 <ul>
                 @foreach (Associations prod in Display.AssignedCategories)
                 {
@@ -36,15 +36,15 @@
                 <div class="form">
                     <form class="row g-3" asp-action="addCategroy">
                         <div class="question">
-                            <label for="floatingInput" asp-for="@AddCategory.CategoryId"><h2>Add Category</h2></label>
-                            <select asp-for="@AddCategory.CategoryId" class="input-group-text" for="inputGroupSelect01">
+                            <label for="floatingInput" asp-for="AddCategory.CategoryId"><h2>Add Category</h2></label>
+                            <select asp-for="AddCategory.CategoryId" class="input-group-text" for="inputGroupSelect01">
                                 @foreach(Categories cat in AddCategoryList)
                                 {
                                     <option value="@cat.CategoryId">@cat.Name</option>
                                 }
                             </select>
                             <br>
-                            <input type="hidden" asp-for="@AddCategory.ProductId" value="@Display.ProductId">
+                            <input type="hidden" asp-for="AddCategory.ProductId" value="@Display.ProductId">
                             <input type="submit" value="Add">
                         </div>
                     </form>

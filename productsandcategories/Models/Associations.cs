@@ -10,12 +10,13 @@ namespace productsandcategories.Model
         [Key]
         public int AssociationId {get;set;}
 
+        [ForeignKey("ProdwithCat")]
         public int ProductId {get;set;}
 
         public Products ProdwithCat {get;set;}
-
+        [ForeignKey("CatwithProd")]
         public int CategoryId {get;set;}
-        
+
         public Categories CatwithProd {get;set;}
 
         public DateTime CreatedAt {get;set;} = DateTime.Now;

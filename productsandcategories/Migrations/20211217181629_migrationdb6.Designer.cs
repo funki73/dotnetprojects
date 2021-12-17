@@ -9,8 +9,8 @@ using productsandcategories.Model;
 namespace productsandcategories.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20211215163744_firstattempt")]
-    partial class firstattempt
+    [Migration("20211217181629_migrationdb6")]
+    partial class migrationdb6
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,11 +21,11 @@ namespace productsandcategories.Migrations
 
             modelBuilder.Entity("productsandcategories.Model.Associations", b =>
                 {
-                    b.Property<int>("AssociationID")
+                    b.Property<int>("AssociationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("CategoryID")
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -37,14 +37,18 @@ namespace productsandcategories.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("AssociationID");
+                    b.HasKey("AssociationId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Associations");
                 });
 
             modelBuilder.Entity("productsandcategories.Model.Categories", b =>
                 {
-                    b.Property<int>("CategoryID")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -58,14 +62,14 @@ namespace productsandcategories.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("CategoryID");
+                    b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("productsandcategories.Model.Products", b =>
                 {
-                    b.Property<int>("ProductID")
+                    b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -80,9 +84,24 @@ namespace productsandcategories.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductID");
+                    b.HasKey("ProductId");
 
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("productsandcategories.Model.Associations", b =>
+                {
+                    b.HasOne("productsandcategories.Model.Categories", "CatwithProd")
+                        .WithMany("AssignedProducts")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("productsandcategories.Model.Products", "ProdwithCat")
+                        .WithMany("AssignedCategories")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

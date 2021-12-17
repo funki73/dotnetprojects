@@ -26,16 +26,10 @@ namespace productsandcategories.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("CatwithProdCategoryId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ProdwithCatProductId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -43,9 +37,9 @@ namespace productsandcategories.Migrations
 
                     b.HasKey("AssociationId");
 
-                    b.HasIndex("CatwithProdCategoryId");
+                    b.HasIndex("CategoryId");
 
-                    b.HasIndex("ProdwithCatProductId");
+                    b.HasIndex("ProductId");
 
                     b.ToTable("Associations");
                 });
@@ -63,15 +57,10 @@ namespace productsandcategories.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int?>("ProductsProductId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("CategoryId");
-
-                    b.HasIndex("ProductsProductId");
 
                     b.ToTable("Categories");
                 });
@@ -102,18 +91,15 @@ namespace productsandcategories.Migrations
                 {
                     b.HasOne("productsandcategories.Model.Categories", "CatwithProd")
                         .WithMany("AssignedProducts")
-                        .HasForeignKey("CatwithProdCategoryId");
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("productsandcategories.Model.Products", "ProdwithCat")
                         .WithMany("AssignedCategories")
-                        .HasForeignKey("ProdwithCatProductId");
-                });
-
-            modelBuilder.Entity("productsandcategories.Model.Categories", b =>
-                {
-                    b.HasOne("productsandcategories.Model.Products", null)
-                        .WithMany("AllCategories")
-                        .HasForeignKey("ProductsProductId");
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
