@@ -109,7 +109,7 @@ namespace ProductAndCatagories.Controllers
 
 
         [HttpGet("category/{categoryId}")]
-        public IActionResult CategoryView(int categoryId)
+        public IActionResult Categoriesaddprod(int categoryId)
         {
             Categoryview catview = new Categoryview()
             {
@@ -120,13 +120,10 @@ namespace ProductAndCatagories.Controllers
 
                 ToAdd = _context.Products
                 .Include(c => c.AssignedCategories)
-                .Where(c => !c.AssignedCategories.Any(cat => cat.CategoryId == categoryId))
-                .ToList()
+                .Where(c => !c.AssignedCategories.Any(cat => cat.CategoryId == categoryId)).ToList()
             };
-
-        return View("CategoryView");
+                return View(catview);
         }
-
 
         [HttpPost("add/category/{categoryId}")]
         public IActionResult addProduct(int categoryId, Categoryview viewModel)
@@ -137,12 +134,9 @@ namespace ProductAndCatagories.Controllers
                 _context.Add(fromFrom);
                 _context.SaveChanges();
 
-                return RedirectToAction("Cate", new {CategoryId = categoryId});
+                return RedirectToAction("Categoriesaddprod", new {CategoryId = categoryId});
             }
-            else 
-            {
-            return CategoryView(categoryId);
-            }
+            return View("Categoriesaddprod");
         }
     }
 }
