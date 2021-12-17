@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using productsandcategories.Model;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace ProductAndCatagories.Controllers
 {
@@ -16,7 +18,7 @@ namespace ProductAndCatagories.Controllers
         {
             _context = context;
         }
-
+        //
         [HttpGet("")]
         public IActionResult Products()
         {
@@ -26,9 +28,9 @@ namespace ProductAndCatagories.Controllers
             };
             return View (product);
         }
-
-        [HttpPost("/addproduct")]
-        public IActionResult addProduct(Products fromForm)
+        //
+        [HttpPost("newproduct")]
+        public IActionResult newProduct(Products fromForm)
         {
         if(ModelState.IsValid)
             {
@@ -39,9 +41,45 @@ namespace ProductAndCatagories.Controllers
             }
             else
             {
-            return View("Index");
+            return View("Products");
             }
         }
+        //
+        [HttpGet("products/{productId}")]
+        public IActionResult Productsaddcat(int productId)
+        {
+            Productview prodview = new Productview()
+            {
+            ToRender = _context.Products
+            .Include(p => p.AssignedCategories)
+            .ThenInclude(a => a.CatwithProd)
+            .FirstOrDefault(p => p.ProductId == productId),
+
+            ToAdd = _context.Categories
+            .Include(c => c.AssignedProducts)
+            .Where(a => !a.AssignedProducts.Any(cat => cat.ProductId == productId)).ToList()
+            };
+            return View(prodview);
+        }
+
+
+        [HttpPost("add/products/{productId}")]
+        public IActionResult addCategroy(int productId, Productview fromForm)
+        {
+            if(ModelState.IsValid)
+            {
+                Associations cat = fromForm.AddCategory;
+                _context.Add(cat);
+                _context.SaveChanges();
+
+            return RedirectToAction("Productsaddcat", new{ProductId = productId});
+            }
+            return View("Productsaddcat");
+        }
+
+
+//Categories Section
+
 
         [HttpGet("categories")]
         public IActionResult Categories()
@@ -53,8 +91,8 @@ namespace ProductAndCatagories.Controllers
             return View (category);
         }
 
-        [HttpPost("addcategory")]
-        public IActionResult addCategory(Categories fromForm)
+        [HttpPost("newcategory")]
+        public IActionResult newCategory(Categories fromForm)
             {
             if(ModelState.IsValid)
                 {
@@ -69,16 +107,42 @@ namespace ProductAndCatagories.Controllers
                 }
             }
 
-        [HttpGet("products/{productId}")]
-        public IActionResult ProductInfo(int productId)
+
+        [HttpGet("category/{categoryId}")]
+        public IActionResult CategoryView(int categoryId)
         {
-            Productview ViewModel = new Productview()
+            Categoryview catview = new Categoryview()
             {
-                ToRender = _context.Products.Include(p => p.).ThenInclude(a => a.CatwithProd).FirstOrDefault(p => p.ProductId == productId),
-                ToAdd = _context.Categories.Include(c => c.)
+                ToRender = _context.Categories
+                .Include(p => p.AssignedProducts)
+                .ThenInclude(a => a.ProdwithCat)
+                .FirstOrDefault(p => p.CategoryId == categoryId),
+
+                ToAdd = _context.Products
+                .Include(c => c.AssignedCategories)
+                .Where(c => !c.AssignedCategories.Any(cat => cat.CategoryId == categoryId))
+                .ToList()
             };
 
-            return View("ProductInfo", ViewModel);
+        return View("CategoryView");
+        }
+
+
+        [HttpPost("add/category/{categoryId}")]
+        public IActionResult addProduct(int categoryId, Categoryview viewModel)
+        {
+            if(ModelState.IsValid)
+            {
+                Associations fromFrom = viewModel.AddForm;
+                _context.Add(fromFrom);
+                _context.SaveChanges();
+
+                return RedirectToAction("Cate", new {CategoryId = categoryId});
+            }
+            else 
+            {
+            return CategoryView(categoryId);
+            }
         }
     }
 }

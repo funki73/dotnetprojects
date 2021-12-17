@@ -54,3 +54,5 @@ C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\prod
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Categories.cshtml.g.cs
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Products.cshtml.g.cs
 C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Productsaddcat.cshtml.g.cs
+C:\Users\randy\dotnetprojects\productsandcategories\obj\Debug\netcoreapp3.1\Razor\Views\Home\Categoriesaddprod.cshtml.g.cs

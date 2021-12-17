@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using productsandcategories.Model;
 
 namespace productsandcategories.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20211216174523_migratevfour")]
+    partial class migratevfour
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,6 +58,9 @@ namespace productsandcategories.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int?>("CategoriesCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -63,15 +68,12 @@ namespace productsandcategories.Migrations
                         .IsRequired()
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
-                    b.Property<int?>("ProductsProductId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("CategoryId");
 
-                    b.HasIndex("ProductsProductId");
+                    b.HasIndex("CategoriesCategoryId");
 
                     b.ToTable("Categories");
                 });
@@ -101,19 +103,19 @@ namespace productsandcategories.Migrations
             modelBuilder.Entity("productsandcategories.Model.Associations", b =>
                 {
                     b.HasOne("productsandcategories.Model.Categories", "CatwithProd")
-                        .WithMany("AssignedProducts")
+                        .WithMany()
                         .HasForeignKey("CatwithProdCategoryId");
 
                     b.HasOne("productsandcategories.Model.Products", "ProdwithCat")
-                        .WithMany("AssignedCategories")
+                        .WithMany("AllCategories")
                         .HasForeignKey("ProdwithCatProductId");
                 });
 
             modelBuilder.Entity("productsandcategories.Model.Categories", b =>
                 {
-                    b.HasOne("productsandcategories.Model.Products", null)
+                    b.HasOne("productsandcategories.Model.Categories", null)
                         .WithMany("AllCategories")
-                        .HasForeignKey("ProductsProductId");
+                        .HasForeignKey("CategoriesCategoryId");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,5 @@
 @using productsandcategories.Model;
-@model Products;
+@model Categoryview;
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,34 +12,40 @@
     <title>Products</title>
 </head>
     <body>
+        @{
+            Associations AddForm = Model.AddForm;
+            List<Products> ToAdd = Model.ToAdd;
+
+        }
         <div class = "container mt-5">
-            <h1>Catagory Name placeholder</h1>
+            <h1>@Model.ToRender.Name</h1>
             <div class="list">
             <h2>Categories</h2>
-            @* @foreach (Products prod in Model.AllProducts)
+            @foreach (Associations prod in Model.ToRender.AssignedProducts)
             {
-                <li>
-                <a href="">@prod.Name</a>
-                </li>
-            } *@
+                <tr>
+                    <td>@prod.ProdwithCat.Name</td>
+                </tr>
+            }
             </div>
             <div class="main">
                 <div class="form">
                     <h2>Add Product</h2>
                     <form class="row g-3" asp-action="addProduct">
                         <div class="question">
-                            @* <span asp-validation-for="ChefId"></span>
-                            <label for="floatingInput" asp-for="ChefId"></label>
-                            <select asp-for="ChefId" class="input-group-text" for="inputGroupSelect01">
-                                @foreach(Chef chef in Model.AllChefs)
+                            <label for="floatingInput" asp-for="@AddForm.ProductId"></label>
+                            <select asp-for="@AddForm.ProductId" class="input-group-text" for="inputGroupSelect01">
+                                @foreach(Products prod in ToAdd)
                                 {
-                                    <option value="@chef.ChefId">@chef.FirstName @chef.LastName</option>
+                                    <option value="@prod.ProductId">@prod.Name</option>
                                 }
-                            </select> *@
+                            </select> 
+                            <input type="hidden" asp-for="@AddForm.ProductId" value="@Model.ToRender.CategoryId">
+                            <input type="submit" value="Add">
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </body>
-</head>
+</html>

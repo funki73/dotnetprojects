@@ -18,10 +18,8 @@ namespace productsandcategories.Model
         public DateTime CreatedAt {get;set;} = DateTime.Now;
         public DateTime UpdatedAt {get;set;} = DateTime.Now;
 
-        public List<Associations> Associate {get; set;}
-
+        public List<Associations> AssignedProducts {get; set;}
         [NotMapped]
         public List<Categories> AllCategories {get; set;}
-
     }
 }

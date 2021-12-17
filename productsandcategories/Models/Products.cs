@@ -20,12 +20,14 @@ namespace productsandcategories.Model
         [Required]
         public int Price {get;set;}
 
+        public List<Associations> AssignedCategories {get; set;}
+
+        public List<Categories> AllCategories {get; set;}
+
         public DateTime CreatedAt = DateTime.Now;
         public DateTime UpdatedAt = DateTime.Now;
 
         [NotMapped]
         public List<Products> AllProducts {get; set;}
-
-        public List<Associations> Associate {get; set;}
     }
 }

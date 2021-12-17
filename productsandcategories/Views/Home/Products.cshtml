@@ -28,7 +28,7 @@
             <div class="main">
                 <div class="form">
                     <h2>New Products</h2>
-                    <form class="row g-3" asp-action="addProduct">
+                    <form class="row g-3" asp-action="newProduct">
                         <div class="question">
                             <span asp-validation-for="Name"></span>
                             <label asp-for="Name" class="form-label" name="Name">Name: </label>
@@ -59,7 +59,7 @@
                 @foreach (Products prod in Model.AllProducts)
                 {
                     <li>
-                    <a href="">@prod.Name</a>
+                    <a href="products/@prod.ProductId">@prod.Name</a>
                     </li>
                 }
             </div>

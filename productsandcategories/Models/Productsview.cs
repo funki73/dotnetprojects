@@ -8,7 +8,7 @@ namespace productsandcategories.Model
 
         public List<Categories> ToAdd { get; set; }
 
-        public Associations AddForm { get; set; }
+        public Associations AddCategory { get; set; }
 
     }
 }

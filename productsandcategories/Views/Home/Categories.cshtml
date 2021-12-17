@@ -27,7 +27,7 @@
             <div class="main">
                 <div class="body">
                     <h2>New Categories:</h2>
-                    <form  asp-action="addCategory" class="row g-3">
+                    <form  asp-action="newCategory" class="row g-3">
                         <div class="question">
                             <span asp-validation-for="Name"></span>
                             <label asp-for="Name" class="form-label"></label>
@@ -46,7 +46,7 @@
                 @foreach (Categories cat in Model.AllCategories)
                 {
                     <li>
-                    <a href="">@cat.Name</a>
+                    <a href="category/@cat.CategoryId">@cat.Name</a>
                     </li>
                 }
             </div>
