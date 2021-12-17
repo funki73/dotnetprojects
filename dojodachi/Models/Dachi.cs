@@ -5,10 +5,10 @@ namespace dojodachi
     class Dachi
     {
         public string Name;
-        public string Happiness;
-        public string Fullness;
-        public string Energy;
-        public string Meals;
+        public int Happiness;
+        public int Fullness;
+        public int Energy;
+        public int Meals;
 
         public Dachi(string name)
             {
