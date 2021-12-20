@@ -1,13 +1,13 @@
 using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using belt_exam;
+using belt_exam.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Session;
 
 
-namespace   belt_exam
+namespace   belt_exam.Controllers
 {
     public class LogRegController : Controller 
     {
@@ -41,7 +41,7 @@ namespace   belt_exam
                 _context.Add(fromForm);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId", fromForm.UserId);
-                return RedirectToAction("Placeholder");
+                return RedirectToAction("Dashboard", "TvShowController");
             }
             else 
             {
@@ -72,7 +72,7 @@ namespace   belt_exam
                 }
 
                 HttpContext.Session.SetInt32("UserId", inDb.UserId);
-                return RedirectToAction("Placeholder");
+                return RedirectToAction("Dashboard", "TvShowController");
 
             }
             else 
@@ -87,23 +87,11 @@ namespace   belt_exam
             HttpContext.Session.Clear();
             return RedirectToAction("Index");
         }
-
-        [HttpGet("placeholder")]
-        public IActionResult Placeholder()
-        {
-            return View();
-        }
-
-//
-
-
-
-
-
-
-
-
-
-
     }
 }
+
+        // [HttpGet("placeholder")]
+        // public IActionResult Placeholder()
+        // {
+        //     return View();
+        // }

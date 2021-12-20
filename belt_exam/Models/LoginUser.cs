@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace belt_exam
+namespace belt_exam.Models
 {
     public class LoginUser
     {

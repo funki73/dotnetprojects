@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\ShowPatal.cshtml",
+      "TargetPath": "Views\\Home\\ShowPatal.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\LogReg\\Index.cshtml",
       "TargetPath": "Views\\LogReg\\Index.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,16 @@
     {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\LogReg\\RegPartial.cshtml",
       "TargetPath": "Views\\LogReg\\RegPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\NewShow.cshtml",
+      "TargetPath": "Views\\Home\\NewShow.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\Dashboard.cshtml",
+      "TargetPath": "Views\\Home\\Dashboard.cshtml",
       "FileKind": "mvc"
     },
     {
