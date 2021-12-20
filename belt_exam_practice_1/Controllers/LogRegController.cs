@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using belt_exam;
 using System.Linq;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Session;
 
 
 namespace   belt_exam
@@ -93,17 +92,5 @@ namespace   belt_exam
         {
             return View();
         }
-
-//
-
-
-
-
-
-
-
-
-
-
     }
 }

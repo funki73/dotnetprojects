@@ -93,17 +93,5 @@ namespace   belt_exam
         {
             return View();
         }
-
-//
-
-
-
-
-
-
-
-
-
-
     }
 }
