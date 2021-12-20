@@ -56,3 +56,8 @@ C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\LogR
 C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\LogPartial.cshtml.g.cs
 C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\Placeholder.cshtml.g.cs
 C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\LogReg\RegPartial.cshtml.g.cs
+C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\TvShow\Dashboard.cshtml.g.cs
+C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\TvShow\EditShow.cshtml.g.cs
+C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\TvShow\NewShow.cshtml.g.cs
+C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\TvShow\ShowPartial.cshtml.g.cs
+C:\Users\randy\dotnetprojects\belt_exam\obj\Debug\netcoreapp3.1\Razor\Views\TvShow\ShowInfo.cshtml.g.cs

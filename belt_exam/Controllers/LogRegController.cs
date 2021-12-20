@@ -41,7 +41,7 @@ namespace   belt_exam.Controllers
                 _context.Add(fromForm);
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId", fromForm.UserId);
-                return RedirectToAction("Dashboard", "TvShowController");
+                return RedirectToAction("Dashboard", "TvShow");
             }
             else 
             {
@@ -72,7 +72,7 @@ namespace   belt_exam.Controllers
                 }
 
                 HttpContext.Session.SetInt32("UserId", inDb.UserId);
-                return RedirectToAction("Dashboard", "TvShowController");
+                return RedirectToAction("Dashboard", "TvShow");
 
             }
             else 

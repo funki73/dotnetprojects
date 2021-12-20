@@ -139,7 +139,6 @@ namespace belt_exam.Controllers
 
             TVShow toEdit = _context.Shows.FirstOrDefault(s => s.TVShowId == showId);
 
-            // Did we create this? If not, begone!
             if(toEdit.UserId != (int)UserId)
             {
                 return RedirectToAction("ShowInfo", new { showId = showId});

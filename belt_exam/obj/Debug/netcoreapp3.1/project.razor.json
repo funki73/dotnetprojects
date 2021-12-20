@@ -14407,11 +14407,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\ShowPatal.cshtml",
-      "TargetPath": "Views\\Home\\ShowPatal.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\LogReg\\Index.cshtml",
       "TargetPath": "Views\\LogReg\\Index.cshtml",
       "FileKind": "mvc"
@@ -14422,13 +14417,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\NewShow.cshtml",
-      "TargetPath": "Views\\Home\\NewShow.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\Home\\Dashboard.cshtml",
-      "TargetPath": "Views\\Home\\Dashboard.cshtml",
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\TvShow\\ShowInfo.cshtml",
+      "TargetPath": "Views\\TvShow\\ShowInfo.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14439,6 +14429,26 @@
     {
       "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\TvShow\\EditShow.cshtml",
+      "TargetPath": "Views\\TvShow\\EditShow.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\TvShow\\Dashboard.cshtml",
+      "TargetPath": "Views\\TvShow\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\TvShow\\NewShow.cshtml",
+      "TargetPath": "Views\\TvShow\\NewShow.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\randy\\dotnetprojects\\belt_exam\\Views\\TvShow\\ShowPartial.cshtml",
+      "TargetPath": "Views\\TvShow\\ShowPartial.cshtml",
       "FileKind": "mvc"
     }
   ],
